@@ -1,0 +1,2691 @@
+# depslib dependency file v1.0
+1457610606 source:c:\users\janne\desktop\ties471\lodproject\src\global.cpp
+	"global.h"
+
+1457951229 c:\users\janne\desktop\ties471\lodproject\src\global.h
+	<iostream>
+	<stdexcept>
+	"log.h"
+
+1457612561 c:\users\janne\desktop\ties471\lodproject\src\log.h
+	<iostream>
+	<stdexcept>
+
+1457610606 source:c:\users\janne\desktop\ties471\lodproject\src\log.cpp
+	"global.h"
+
+1458228138 source:c:\users\janne\desktop\ties471\lodproject\src\misc.cpp
+	<fstream>
+	<streambuf>
+	<stdexcept>
+	<algorithm>
+	<array>
+	"misc.h"
+	"global.h"
+
+1458226960 c:\users\janne\desktop\ties471\lodproject\src\misc.h
+	<iostream>
+	<GL/glew.h>
+
+1439232442 c:\users\janne\desktop\ties471\lodproject\libs\include\gl\glew.h
+	<stddef.h>
+	<inttypes.h>
+	<stdint.h>
+	<inttypes.h>
+	<Availability.h>
+	<OpenGL/glu.h>
+	<GL/glu.h>
+
+1458318671 source:c:\users\janne\desktop\ties471\lodproject\src\program.cpp
+	<vector>
+	<array>
+	"program.h"
+	<glm/fwd.hpp>
+	<glm/glm.hpp>
+
+1458318502 c:\users\janne\desktop\ties471\lodproject\src\program.h
+	<GL/glew.h>
+	"window.h"
+	"vertexbuffer.h"
+	"vao.h"
+	"shader.h"
+
+1458295485 c:\users\janne\desktop\ties471\lodproject\src\window.h
+	<iostream>
+	<memory>
+	<SDL2/SDL.h>
+	<GL/glew.h>
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_assert.h"
+	"SDL_atomic.h"
+	"SDL_audio.h"
+	"SDL_clipboard.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_filesystem.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_haptic.h"
+	"SDL_hints.h"
+	"SDL_loadso.h"
+	"SDL_log.h"
+	"SDL_messagebox.h"
+	"SDL_mutex.h"
+	"SDL_power.h"
+	"SDL_render.h"
+	"SDL_rwops.h"
+	"SDL_system.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_version.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<math.h>
+	<float.h>
+	<iconv.h>
+	<sal.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_config.h
+	"SDL_platform.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_platform.h
+	"AvailabilityMacros.h"
+	"TargetConditionals.h"
+	<winapifamily.h>
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\begin_code.h
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\close_code.h
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_assert.h
+	"SDL_config.h"
+	"begin_code.h"
+	<signal.h>
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_atomic.h
+	"SDL_stdinc.h"
+	"SDL_platform.h"
+	"begin_code.h"
+	<mbarrier.h>
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_atomic.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_clipboard.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	<intrin.h>
+	<intrin.h>
+	<altivec.h>
+	<mmintrin.h>
+	<mm3dnow.h>
+	<xmmintrin.h>
+	<emmintrin.h>
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_quit.h"
+	"SDL_gesture.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_pixels.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_rect.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_pixels.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_surface.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_blendmode.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_blendmode.h
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keycode.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_keycode.h
+	"SDL_stdinc.h"
+	"SDL_scancode.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_scancode.h
+	"SDL_stdinc.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_gamecontroller.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_gesture.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_touch.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_filesystem.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_haptic.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_hints.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_log.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_messagebox.h
+	"SDL_stdinc.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_power.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_render.h
+	"SDL_stdinc.h"
+	"SDL_rect.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_system.h
+	"SDL_stdinc.h"
+	"SDL_keyboard.h"
+	"SDL_render.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\janne\desktop\ties471\lodproject\libs\include\sdl2\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1458306561 c:\users\janne\desktop\ties471\lodproject\src\vertexbuffer.h
+	<tuple>
+	<GL/glew.h>
+
+1458300214 c:\users\janne\desktop\ties471\lodproject\src\vao.h
+	<GL/glew.h>
+
+1459403920 c:\users\janne\desktop\ties471\lodproject\src\shader.h
+	<iostream>
+	<vector>
+	<GL/glew.h>
+	<array>
+	"misc.h"
+
+1438457738 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\fwd.hpp
+	"detail/type_int.hpp"
+	"detail/type_float.hpp"
+	"detail/type_vec.hpp"
+	"detail/type_mat.hpp"
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_int.hpp
+	"setup.hpp"
+	<type_traits>
+	<cstdint>
+
+1458389220 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\setup.hpp
+	<cassert>
+	<cstddef>
+	<cuda.h>
+	<intrin.h>
+	<immintrin.h>
+	<immintrin.h>
+	<smmintrin.h>
+	<pmmintrin.h>
+	<emmintrin.h>
+	<__config>
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_float.hpp
+	"setup.hpp"
+
+1438457904 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_vec.hpp
+	"precision.hpp"
+	"type_int.hpp"
+
+1457809686 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\precision.hpp
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_mat.hpp
+	"precision.hpp"
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\glm.hpp
+	"detail/_fixes.hpp"
+	<cmath>
+	<climits>
+	<cfloat>
+	<limits>
+	<cassert>
+	"fwd.hpp"
+	"vec2.hpp"
+	"vec3.hpp"
+	"vec4.hpp"
+	"mat2x2.hpp"
+	"mat2x3.hpp"
+	"mat2x4.hpp"
+	"mat3x2.hpp"
+	"mat3x3.hpp"
+	"mat3x4.hpp"
+	"mat4x2.hpp"
+	"mat4x3.hpp"
+	"mat4x4.hpp"
+	"trigonometric.hpp"
+	"exponential.hpp"
+	"common.hpp"
+	"packing.hpp"
+	"geometric.hpp"
+	"matrix.hpp"
+	"vector_relational.hpp"
+	"integer.hpp"
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\_fixes.hpp
+	<cmath>
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\vec2.hpp
+	"detail/type_vec2.hpp"
+
+1458389182 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_vec2.hpp
+	"type_vec.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<cstddef>
+	"type_vec2.inl"
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\_swizzle.hpp
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\_swizzle_func.hpp
+
+1458389182 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_vec2.inl
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\vec3.hpp
+	"detail/type_vec3.hpp"
+
+1458389182 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_vec3.hpp
+	"type_vec.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<cstddef>
+	"type_vec3.inl"
+
+1458389182 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_vec3.inl
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\vec4.hpp
+	"detail/type_vec4.hpp"
+
+1458389220 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_vec4.hpp
+	"setup.hpp"
+	"type_vec.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<cstddef>
+	"type_vec4.inl"
+
+1458389220 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_vec4.inl
+	"type_vec4_sse2.inl"
+	"type_vec4_avx.inl"
+	"type_vec4_avx2.inl"
+
+1441031694 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_vec4_sse2.inl
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_vec4_avx.inl
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_vec4_avx2.inl
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\mat2x2.hpp
+	"detail/type_mat2x2.hpp"
+
+1458389182 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_mat2x2.hpp
+	"../fwd.hpp"
+	"type_vec2.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat2x2.inl"
+
+1457866026 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_mat2x2.inl
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\mat2x3.hpp
+	"detail/type_mat2x3.hpp"
+
+1458389182 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_mat2x3.hpp
+	"../fwd.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat2x3.inl"
+
+1457866026 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_mat2x3.inl
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\mat2x4.hpp
+	"detail/type_mat2x4.hpp"
+
+1458389220 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_mat2x4.hpp
+	"../fwd.hpp"
+	"type_vec2.hpp"
+	"type_vec4.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat2x4.inl"
+
+1458389220 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_mat2x4.inl
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\mat3x2.hpp
+	"detail/type_mat3x2.hpp"
+
+1458389182 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_mat3x2.hpp
+	"../fwd.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat3x2.inl"
+
+1457865834 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_mat3x2.inl
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\mat3x3.hpp
+	"detail/type_mat3x3.hpp"
+
+1458389182 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_mat3x3.hpp
+	"../fwd.hpp"
+	"type_vec3.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat3x3.inl"
+
+1457865834 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_mat3x3.inl
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\mat3x4.hpp
+	"detail/type_mat3x4.hpp"
+
+1458389182 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_mat3x4.hpp
+	"../fwd.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat3x4.inl"
+
+1457865832 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_mat3x4.inl
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\mat4x2.hpp
+	"detail/type_mat4x2.hpp"
+
+1458389182 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_mat4x2.hpp
+	"../fwd.hpp"
+	"type_vec2.hpp"
+	"type_vec4.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat4x2.inl"
+
+1458389182 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_mat4x2.inl
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\mat4x3.hpp
+	"detail/type_mat4x3.hpp"
+
+1458389182 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_mat4x3.hpp
+	"../fwd.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat4x3.inl"
+
+1457865832 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_mat4x3.inl
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\mat4x4.hpp
+	"detail/type_mat4x4.hpp"
+
+1458389220 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_mat4x4.hpp
+	"../fwd.hpp"
+	"type_vec4.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat4x4.inl"
+
+1457865844 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_mat4x4.inl
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\trigonometric.hpp
+	"detail/func_trigonometric.hpp"
+
+1441044638 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\func_trigonometric.hpp
+	"setup.hpp"
+	"precision.hpp"
+	"func_trigonometric.inl"
+
+1458389182 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\func_trigonometric.inl
+	"_vectorize.hpp"
+	<cmath>
+	<limits>
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\_vectorize.hpp
+	"type_vec1.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+
+1458389182 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_vec1.hpp
+	"../fwd.hpp"
+	"type_vec.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<cstddef>
+	"type_vec1.inl"
+
+1458389182 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_vec1.inl
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\exponential.hpp
+	"detail/func_exponential.hpp"
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\func_exponential.hpp
+	"type_vec1.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	<cmath>
+	"func_exponential.inl"
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\func_exponential.inl
+	"func_vector_relational.hpp"
+	"_vectorize.hpp"
+	<limits>
+	<cmath>
+	<cassert>
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\func_vector_relational.hpp
+	"precision.hpp"
+	"setup.hpp"
+	"func_vector_relational.inl"
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\func_vector_relational.inl
+	<limits>
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\common.hpp
+	"detail/func_common.hpp"
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\func_common.hpp
+	"setup.hpp"
+	"precision.hpp"
+	"type_int.hpp"
+	"_fixes.hpp"
+	"func_common.inl"
+
+1451838036 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\func_common.inl
+	"func_vector_relational.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	"_vectorize.hpp"
+	<limits>
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\packing.hpp
+	"detail/func_packing.hpp"
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\func_packing.hpp
+	"type_vec2.hpp"
+	"type_vec4.hpp"
+	"func_packing.inl"
+
+1437254918 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\func_packing.inl
+	"func_common.hpp"
+	"type_half.hpp"
+	"../fwd.hpp"
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_half.hpp
+	"setup.hpp"
+	"type_half.inl"
+
+1451838416 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\type_half.inl
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\geometric.hpp
+	"detail/func_geometric.hpp"
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\func_geometric.hpp
+	"type_vec3.hpp"
+	"func_geometric.inl"
+
+1458389182 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\func_geometric.inl
+	"func_exponential.hpp"
+	"func_common.hpp"
+	"type_vec2.hpp"
+	"type_vec4.hpp"
+	"type_float.hpp"
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\matrix.hpp
+	"detail/func_matrix.hpp"
+
+1457214680 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\func_matrix.hpp
+	"../detail/precision.hpp"
+	"../detail/setup.hpp"
+	"../detail/type_mat.hpp"
+	"../vec2.hpp"
+	"../vec3.hpp"
+	"../vec4.hpp"
+	"../mat2x2.hpp"
+	"../mat2x3.hpp"
+	"../mat2x4.hpp"
+	"../mat3x2.hpp"
+	"../mat3x3.hpp"
+	"../mat3x4.hpp"
+	"../mat4x2.hpp"
+	"../mat4x3.hpp"
+	"../mat4x4.hpp"
+	"func_matrix.inl"
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\func_matrix.inl
+	"../geometric.hpp"
+	<limits>
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\vector_relational.hpp
+	"detail/func_vector_relational.hpp"
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\integer.hpp
+	"detail/func_integer.hpp"
+
+1424010684 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\func_integer.hpp
+	"setup.hpp"
+	"precision.hpp"
+	"func_common.hpp"
+	"func_vector_relational.hpp"
+	"func_integer.inl"
+
+1426531504 c:\users\janne\desktop\ties471\lodproject\libs\include\glm\detail\func_integer.inl
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	"type_int.hpp"
+	"_vectorize.hpp"
+	<intrin.h>
+	<limits>
+
+1458230026 source:c:\users\janne\desktop\ties471\lodproject\src\shader.cpp
+	<stdexcept>
+	<vector>
+	<fstream>
+	<tuple>
+	"shader.h"
+	"misc.h"
+	"global.h"
+
+1458300156 source:c:\users\janne\desktop\ties471\lodproject\src\vao.cpp
+	"vao.h"
+
+1458318332 source:c:\users\janne\desktop\ties471\lodproject\src\vertexbuffer.cpp
+	"vertexbuffer.h"
+
+1458298640 source:c:\users\janne\desktop\ties471\lodproject\src\window.cpp
+	<stdexcept>
+	"window.h"
+	<GL/glew.h>
+	"global.h"
+
+1459403550 source:c:\users\janne\desktop\ties471\lodproject\src\main.cpp
+	<stdexcept>
+	<SDL2/SDL.h>
+	<GL/glew.h>
+	"global.h"
+	"window.h"
+	"shader.h"
+	"program.h"
+	"vao.h"
+	"vertexbuffer.h"
+	"misc.h"
+
+1457610608 source:c:\mytemp\lodproject\src\global.cpp
+	"global.h"
+
+1457951230 c:\mytemp\lodproject\src\global.h
+	<iostream>
+	<stdexcept>
+	"log.h"
+
+1457612562 c:\mytemp\lodproject\src\log.h
+	<iostream>
+	<stdexcept>
+
+1457610608 source:c:\mytemp\lodproject\src\log.cpp
+	"global.h"
+
+1461336091 source:c:\mytemp\lodproject\src\main.cpp
+	<stdexcept>
+	<SDL2/SDL.h>
+	<GL/glew.h>
+	"global.h"
+	"window.h"
+	"shader.h"
+	"program.h"
+	"vao.h"
+	"vertexbuffer.h"
+	"misc.h"
+	"modelparser.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_assert.h"
+	"SDL_atomic.h"
+	"SDL_audio.h"
+	"SDL_clipboard.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_filesystem.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_haptic.h"
+	"SDL_hints.h"
+	"SDL_loadso.h"
+	"SDL_log.h"
+	"SDL_messagebox.h"
+	"SDL_mutex.h"
+	"SDL_power.h"
+	"SDL_render.h"
+	"SDL_rwops.h"
+	"SDL_system.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_version.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<math.h>
+	<float.h>
+	<iconv.h>
+	<sal.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_config.h
+	"SDL_platform.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_platform.h
+	"AvailabilityMacros.h"
+	"TargetConditionals.h"
+	<winapifamily.h>
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\begin_code.h
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\close_code.h
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_assert.h
+	"SDL_config.h"
+	"begin_code.h"
+	<signal.h>
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_atomic.h
+	"SDL_stdinc.h"
+	"SDL_platform.h"
+	"begin_code.h"
+	<mbarrier.h>
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_atomic.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_clipboard.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	<intrin.h>
+	<intrin.h>
+	<altivec.h>
+	<mmintrin.h>
+	<mm3dnow.h>
+	<xmmintrin.h>
+	<emmintrin.h>
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_quit.h"
+	"SDL_gesture.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_pixels.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_rect.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_pixels.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_surface.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_blendmode.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_blendmode.h
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keycode.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_keycode.h
+	"SDL_stdinc.h"
+	"SDL_scancode.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_scancode.h
+	"SDL_stdinc.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_gamecontroller.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_gesture.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_touch.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_filesystem.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_haptic.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_hints.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_log.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_messagebox.h
+	"SDL_stdinc.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_power.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_render.h
+	"SDL_stdinc.h"
+	"SDL_rect.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_system.h
+	"SDL_stdinc.h"
+	"SDL_keyboard.h"
+	"SDL_render.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\mytemp\lodproject\libs\include\sdl2\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1439207242 c:\mytemp\lodproject\libs\include\gl\glew.h
+	<stddef.h>
+	<inttypes.h>
+	<stdint.h>
+	<inttypes.h>
+	<Availability.h>
+	<OpenGL/glu.h>
+	<GL/glu.h>
+
+1458295486 c:\mytemp\lodproject\src\window.h
+	<iostream>
+	<memory>
+	<SDL2/SDL.h>
+	<GL/glew.h>
+
+1459864058 c:\mytemp\lodproject\src\shader.h
+	<iostream>
+	<vector>
+	<array>
+	<GL/glew.h>
+	<glm/glm.hpp>
+	"misc.h"
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\glm.hpp
+	"detail/_fixes.hpp"
+	<cmath>
+	<climits>
+	<cfloat>
+	<limits>
+	<cassert>
+	"fwd.hpp"
+	"vec2.hpp"
+	"vec3.hpp"
+	"vec4.hpp"
+	"mat2x2.hpp"
+	"mat2x3.hpp"
+	"mat2x4.hpp"
+	"mat3x2.hpp"
+	"mat3x3.hpp"
+	"mat3x4.hpp"
+	"mat4x2.hpp"
+	"mat4x3.hpp"
+	"mat4x4.hpp"
+	"trigonometric.hpp"
+	"exponential.hpp"
+	"common.hpp"
+	"packing.hpp"
+	"geometric.hpp"
+	"matrix.hpp"
+	"vector_relational.hpp"
+	"integer.hpp"
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\detail\_fixes.hpp
+	<cmath>
+
+1438457738 c:\mytemp\lodproject\libs\include\glm\fwd.hpp
+	"detail/type_int.hpp"
+	"detail/type_float.hpp"
+	"detail/type_vec.hpp"
+	"detail/type_mat.hpp"
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\detail\type_int.hpp
+	"setup.hpp"
+	<type_traits>
+	<cstdint>
+
+1458389220 c:\mytemp\lodproject\libs\include\glm\detail\setup.hpp
+	<cassert>
+	<cstddef>
+	<cuda.h>
+	<intrin.h>
+	<immintrin.h>
+	<immintrin.h>
+	<smmintrin.h>
+	<pmmintrin.h>
+	<emmintrin.h>
+	<__config>
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\detail\type_float.hpp
+	"setup.hpp"
+
+1438457904 c:\mytemp\lodproject\libs\include\glm\detail\type_vec.hpp
+	"precision.hpp"
+	"type_int.hpp"
+
+1457809686 c:\mytemp\lodproject\libs\include\glm\detail\precision.hpp
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\detail\type_mat.hpp
+	"precision.hpp"
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\vec2.hpp
+	"detail/type_vec2.hpp"
+
+1458389182 c:\mytemp\lodproject\libs\include\glm\detail\type_vec2.hpp
+	"type_vec.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<cstddef>
+	"type_vec2.inl"
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\detail\_swizzle.hpp
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\detail\_swizzle_func.hpp
+
+1458389182 c:\mytemp\lodproject\libs\include\glm\detail\type_vec2.inl
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\vec3.hpp
+	"detail/type_vec3.hpp"
+
+1458389182 c:\mytemp\lodproject\libs\include\glm\detail\type_vec3.hpp
+	"type_vec.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<cstddef>
+	"type_vec3.inl"
+
+1458389182 c:\mytemp\lodproject\libs\include\glm\detail\type_vec3.inl
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\vec4.hpp
+	"detail/type_vec4.hpp"
+
+1458389220 c:\mytemp\lodproject\libs\include\glm\detail\type_vec4.hpp
+	"setup.hpp"
+	"type_vec.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<cstddef>
+	"type_vec4.inl"
+
+1458389220 c:\mytemp\lodproject\libs\include\glm\detail\type_vec4.inl
+	"type_vec4_sse2.inl"
+	"type_vec4_avx.inl"
+	"type_vec4_avx2.inl"
+
+1441031694 c:\mytemp\lodproject\libs\include\glm\detail\type_vec4_sse2.inl
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\detail\type_vec4_avx.inl
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\detail\type_vec4_avx2.inl
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\mat2x2.hpp
+	"detail/type_mat2x2.hpp"
+
+1458389182 c:\mytemp\lodproject\libs\include\glm\detail\type_mat2x2.hpp
+	"../fwd.hpp"
+	"type_vec2.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat2x2.inl"
+
+1457866026 c:\mytemp\lodproject\libs\include\glm\detail\type_mat2x2.inl
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\mat2x3.hpp
+	"detail/type_mat2x3.hpp"
+
+1458389182 c:\mytemp\lodproject\libs\include\glm\detail\type_mat2x3.hpp
+	"../fwd.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat2x3.inl"
+
+1457866026 c:\mytemp\lodproject\libs\include\glm\detail\type_mat2x3.inl
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\mat2x4.hpp
+	"detail/type_mat2x4.hpp"
+
+1458389220 c:\mytemp\lodproject\libs\include\glm\detail\type_mat2x4.hpp
+	"../fwd.hpp"
+	"type_vec2.hpp"
+	"type_vec4.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat2x4.inl"
+
+1458389220 c:\mytemp\lodproject\libs\include\glm\detail\type_mat2x4.inl
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\mat3x2.hpp
+	"detail/type_mat3x2.hpp"
+
+1458389182 c:\mytemp\lodproject\libs\include\glm\detail\type_mat3x2.hpp
+	"../fwd.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat3x2.inl"
+
+1457865834 c:\mytemp\lodproject\libs\include\glm\detail\type_mat3x2.inl
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\mat3x3.hpp
+	"detail/type_mat3x3.hpp"
+
+1458389182 c:\mytemp\lodproject\libs\include\glm\detail\type_mat3x3.hpp
+	"../fwd.hpp"
+	"type_vec3.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat3x3.inl"
+
+1457865834 c:\mytemp\lodproject\libs\include\glm\detail\type_mat3x3.inl
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\mat3x4.hpp
+	"detail/type_mat3x4.hpp"
+
+1458389182 c:\mytemp\lodproject\libs\include\glm\detail\type_mat3x4.hpp
+	"../fwd.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat3x4.inl"
+
+1457865832 c:\mytemp\lodproject\libs\include\glm\detail\type_mat3x4.inl
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\mat4x2.hpp
+	"detail/type_mat4x2.hpp"
+
+1458389182 c:\mytemp\lodproject\libs\include\glm\detail\type_mat4x2.hpp
+	"../fwd.hpp"
+	"type_vec2.hpp"
+	"type_vec4.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat4x2.inl"
+
+1458389182 c:\mytemp\lodproject\libs\include\glm\detail\type_mat4x2.inl
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\mat4x3.hpp
+	"detail/type_mat4x3.hpp"
+
+1458389182 c:\mytemp\lodproject\libs\include\glm\detail\type_mat4x3.hpp
+	"../fwd.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat4x3.inl"
+
+1457865832 c:\mytemp\lodproject\libs\include\glm\detail\type_mat4x3.inl
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\mat4x4.hpp
+	"detail/type_mat4x4.hpp"
+
+1458389220 c:\mytemp\lodproject\libs\include\glm\detail\type_mat4x4.hpp
+	"../fwd.hpp"
+	"type_vec4.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat4x4.inl"
+
+1457865844 c:\mytemp\lodproject\libs\include\glm\detail\type_mat4x4.inl
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\trigonometric.hpp
+	"detail/func_trigonometric.hpp"
+
+1441044638 c:\mytemp\lodproject\libs\include\glm\detail\func_trigonometric.hpp
+	"setup.hpp"
+	"precision.hpp"
+	"func_trigonometric.inl"
+
+1458389182 c:\mytemp\lodproject\libs\include\glm\detail\func_trigonometric.inl
+	"_vectorize.hpp"
+	<cmath>
+	<limits>
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\detail\_vectorize.hpp
+	"type_vec1.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+
+1458389182 c:\mytemp\lodproject\libs\include\glm\detail\type_vec1.hpp
+	"../fwd.hpp"
+	"type_vec.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<cstddef>
+	"type_vec1.inl"
+
+1458389182 c:\mytemp\lodproject\libs\include\glm\detail\type_vec1.inl
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\exponential.hpp
+	"detail/func_exponential.hpp"
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\detail\func_exponential.hpp
+	"type_vec1.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	<cmath>
+	"func_exponential.inl"
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\detail\func_exponential.inl
+	"func_vector_relational.hpp"
+	"_vectorize.hpp"
+	<limits>
+	<cmath>
+	<cassert>
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\detail\func_vector_relational.hpp
+	"precision.hpp"
+	"setup.hpp"
+	"func_vector_relational.inl"
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\detail\func_vector_relational.inl
+	<limits>
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\common.hpp
+	"detail/func_common.hpp"
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\detail\func_common.hpp
+	"setup.hpp"
+	"precision.hpp"
+	"type_int.hpp"
+	"_fixes.hpp"
+	"func_common.inl"
+
+1451838036 c:\mytemp\lodproject\libs\include\glm\detail\func_common.inl
+	"func_vector_relational.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	"_vectorize.hpp"
+	<limits>
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\packing.hpp
+	"detail/func_packing.hpp"
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\detail\func_packing.hpp
+	"type_vec2.hpp"
+	"type_vec4.hpp"
+	"func_packing.inl"
+
+1437254918 c:\mytemp\lodproject\libs\include\glm\detail\func_packing.inl
+	"func_common.hpp"
+	"type_half.hpp"
+	"../fwd.hpp"
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\detail\type_half.hpp
+	"setup.hpp"
+	"type_half.inl"
+
+1451838416 c:\mytemp\lodproject\libs\include\glm\detail\type_half.inl
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\geometric.hpp
+	"detail/func_geometric.hpp"
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\detail\func_geometric.hpp
+	"type_vec3.hpp"
+	"func_geometric.inl"
+
+1458389182 c:\mytemp\lodproject\libs\include\glm\detail\func_geometric.inl
+	"func_exponential.hpp"
+	"func_common.hpp"
+	"type_vec2.hpp"
+	"type_vec4.hpp"
+	"type_float.hpp"
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\matrix.hpp
+	"detail/func_matrix.hpp"
+
+1457214680 c:\mytemp\lodproject\libs\include\glm\detail\func_matrix.hpp
+	"../detail/precision.hpp"
+	"../detail/setup.hpp"
+	"../detail/type_mat.hpp"
+	"../vec2.hpp"
+	"../vec3.hpp"
+	"../vec4.hpp"
+	"../mat2x2.hpp"
+	"../mat2x3.hpp"
+	"../mat2x4.hpp"
+	"../mat3x2.hpp"
+	"../mat3x3.hpp"
+	"../mat3x4.hpp"
+	"../mat4x2.hpp"
+	"../mat4x3.hpp"
+	"../mat4x4.hpp"
+	"func_matrix.inl"
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\detail\func_matrix.inl
+	"../geometric.hpp"
+	<limits>
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\vector_relational.hpp
+	"detail/func_vector_relational.hpp"
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\integer.hpp
+	"detail/func_integer.hpp"
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\detail\func_integer.hpp
+	"setup.hpp"
+	"precision.hpp"
+	"func_common.hpp"
+	"func_vector_relational.hpp"
+	"func_integer.inl"
+
+1426531504 c:\mytemp\lodproject\libs\include\glm\detail\func_integer.inl
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	"type_int.hpp"
+	"_vectorize.hpp"
+	<intrin.h>
+	<limits>
+
+1461329644 c:\mytemp\lodproject\src\misc.h
+	<stdint.h>
+	<string>
+	<iostream>
+	<sstream>
+	<typeinfo>
+	<type_traits>
+	<vector>
+	<streambuf>
+	<stdexcept>
+	<algorithm>
+	<iterator>
+	<regex>
+	<GL/glew.h>
+	"global.h"
+
+1461531276 c:\mytemp\lodproject\src\program.h
+	<GL/glew.h>
+	<glm/fwd.hpp>
+	<glm/glm.hpp>
+	<glm/gtc/matrix_transform.hpp>
+	"window.h"
+	"vertexbuffer.h"
+	"vao.h"
+	"shader.h"
+	"texture.h"
+	"Camera.h"
+	"indexbuffer.h"
+
+1461156872 c:\mytemp\lodproject\src\vertexbuffer.h
+	<tuple>
+	<vector>
+	<GL/glew.h>
+
+1458300216 c:\mytemp\lodproject\src\vao.h
+	<GL/glew.h>
+
+1461329586 source:c:\mytemp\lodproject\src\misc.cpp
+	<fstream>
+	<streambuf>
+	<stdexcept>
+	<algorithm>
+	<array>
+	"misc.h"
+	"global.h"
+
+1461335845 source:c:\mytemp\lodproject\src\program.cpp
+	<vector>
+	<array>
+	<math.h>
+	"program.h"
+	"global.h"
+	"modelparser.h"
+
+1461311763 source:c:\mytemp\lodproject\src\shader.cpp
+	<stdexcept>
+	<vector>
+	<fstream>
+	<tuple>
+	<glm/gtc/type_ptr.hpp>
+	"shader.h"
+	"misc.h"
+	"global.h"
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\gtc\type_ptr.hpp
+	"../gtc/quaternion.hpp"
+	"../vec2.hpp"
+	"../vec3.hpp"
+	"../vec4.hpp"
+	"../mat2x2.hpp"
+	"../mat2x3.hpp"
+	"../mat2x4.hpp"
+	"../mat3x2.hpp"
+	"../mat3x3.hpp"
+	"../mat3x4.hpp"
+	"../mat4x2.hpp"
+	"../mat4x3.hpp"
+	"../mat4x4.hpp"
+	<cstring>
+	"type_ptr.inl"
+
+1458389220 c:\mytemp\lodproject\libs\include\glm\gtc\quaternion.hpp
+	"../mat3x3.hpp"
+	"../mat4x4.hpp"
+	"../vec3.hpp"
+	"../vec4.hpp"
+	"../gtc/constants.hpp"
+	"quaternion.inl"
+
+1441044256 c:\mytemp\lodproject\libs\include\glm\gtc\constants.hpp
+	"../detail/setup.hpp"
+	"constants.inl"
+
+1441045496 c:\mytemp\lodproject\libs\include\glm\gtc\constants.inl
+	<limits>
+
+1458389182 c:\mytemp\lodproject\libs\include\glm\gtc\quaternion.inl
+	"../trigonometric.hpp"
+	"../geometric.hpp"
+	"../exponential.hpp"
+	<limits>
+
+1424010684 c:\mytemp\lodproject\libs\include\glm\gtc\type_ptr.inl
+	<cstring>
+
+1458300158 source:c:\mytemp\lodproject\src\vao.cpp
+	"vao.h"
+
+1461310937 source:c:\mytemp\lodproject\src\vertexbuffer.cpp
+	<exception>
+	"global.h"
+	"vertexbuffer.h"
+
+1461153323 source:c:\mytemp\lodproject\src\window.cpp
+	<stdexcept>
+	"window.h"
+	<GL/glew.h>
+	"global.h"
+
+1461312018 c:\mytemp\lodproject\src\texture.h
+	<iostream>
+	<soil.h>
+	<GL/glew.h>
+
+1459864334 c:\mytemp\lodproject\libs\include\soil.h
+
+1461312044 source:c:\mytemp\lodproject\src\texture.cpp
+	"texture.h"
+	"global.h"
+
+1461315271 source:c:\mytemp\lodproject\src\camera.cpp
+	"global.h"
+	"Camera.h"
+
+1461313185 c:\mytemp\lodproject\src\camera.h
+	<glm/fwd.hpp>
+	<glm/glm.hpp>
+	<glm/gtc/matrix_transform.hpp>
+
+1458389182 c:\mytemp\lodproject\libs\include\glm\gtc\matrix_transform.hpp
+	"../mat4x4.hpp"
+	"../vec2.hpp"
+	"../vec3.hpp"
+	"../vec4.hpp"
+	"../gtc/constants.hpp"
+	"matrix_transform.inl"
+
+1458389182 c:\mytemp\lodproject\libs\include\glm\gtc\matrix_transform.inl
+	"../geometric.hpp"
+	"../trigonometric.hpp"
+	"../matrix.hpp"
+
+1461223866 source:c:\mytemp\lodproject\src\indexbuffer.cpp
+	"indexbuffer.h"
+
+1461223875 c:\mytemp\lodproject\src\indexbuffer.h
+	<GL/glew.h>
+
+1461336875 source:c:\mytemp\lodproject\src\modelparser.cpp
+	"modelparser.h"
+	"misc.h"
+
+1461568966 c:\mytemp\lodproject\src\modelparser.h
+	<vector>
+	<string>
+	<fstream>
+	<iostream>
+	<sstream>
+	<regex>
+	<exception>
+	"global.h"
+	<glm/fwd.hpp>
+	<glm/glm.hpp>
+
+1461315271 source:c:\users\isi\desktop\lodproject\src\camera.cpp
+	"global.h"
+	"Camera.h"
+
+1457951230 c:\users\isi\desktop\lodproject\src\global.h
+	<iostream>
+	<stdexcept>
+	"log.h"
+
+1457612562 c:\users\isi\desktop\lodproject\src\log.h
+	<iostream>
+	<stdexcept>
+
+1461313185 c:\users\isi\desktop\lodproject\src\camera.h
+	<glm/fwd.hpp>
+	<glm/glm.hpp>
+	<glm/gtc/matrix_transform.hpp>
+
+1438457738 c:\users\isi\desktop\lodproject\libs\include\glm\fwd.hpp
+	"detail/type_int.hpp"
+	"detail/type_float.hpp"
+	"detail/type_vec.hpp"
+	"detail/type_mat.hpp"
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_int.hpp
+	"setup.hpp"
+	<type_traits>
+	<cstdint>
+
+1458389220 c:\users\isi\desktop\lodproject\libs\include\glm\detail\setup.hpp
+	<cassert>
+	<cstddef>
+	<cuda.h>
+	<intrin.h>
+	<immintrin.h>
+	<immintrin.h>
+	<smmintrin.h>
+	<pmmintrin.h>
+	<emmintrin.h>
+	<__config>
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_float.hpp
+	"setup.hpp"
+
+1438457904 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_vec.hpp
+	"precision.hpp"
+	"type_int.hpp"
+
+1457809686 c:\users\isi\desktop\lodproject\libs\include\glm\detail\precision.hpp
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_mat.hpp
+	"precision.hpp"
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\glm.hpp
+	"detail/_fixes.hpp"
+	<cmath>
+	<climits>
+	<cfloat>
+	<limits>
+	<cassert>
+	"fwd.hpp"
+	"vec2.hpp"
+	"vec3.hpp"
+	"vec4.hpp"
+	"mat2x2.hpp"
+	"mat2x3.hpp"
+	"mat2x4.hpp"
+	"mat3x2.hpp"
+	"mat3x3.hpp"
+	"mat3x4.hpp"
+	"mat4x2.hpp"
+	"mat4x3.hpp"
+	"mat4x4.hpp"
+	"trigonometric.hpp"
+	"exponential.hpp"
+	"common.hpp"
+	"packing.hpp"
+	"geometric.hpp"
+	"matrix.hpp"
+	"vector_relational.hpp"
+	"integer.hpp"
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\detail\_fixes.hpp
+	<cmath>
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\vec2.hpp
+	"detail/type_vec2.hpp"
+
+1458389182 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_vec2.hpp
+	"type_vec.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<cstddef>
+	"type_vec2.inl"
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\detail\_swizzle.hpp
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\detail\_swizzle_func.hpp
+
+1458389182 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_vec2.inl
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\vec3.hpp
+	"detail/type_vec3.hpp"
+
+1458389182 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_vec3.hpp
+	"type_vec.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<cstddef>
+	"type_vec3.inl"
+
+1458389182 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_vec3.inl
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\vec4.hpp
+	"detail/type_vec4.hpp"
+
+1458389220 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_vec4.hpp
+	"setup.hpp"
+	"type_vec.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<cstddef>
+	"type_vec4.inl"
+
+1458389220 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_vec4.inl
+	"type_vec4_sse2.inl"
+	"type_vec4_avx.inl"
+	"type_vec4_avx2.inl"
+
+1441031694 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_vec4_sse2.inl
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_vec4_avx.inl
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_vec4_avx2.inl
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\mat2x2.hpp
+	"detail/type_mat2x2.hpp"
+
+1458389182 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_mat2x2.hpp
+	"../fwd.hpp"
+	"type_vec2.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat2x2.inl"
+
+1457866026 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_mat2x2.inl
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\mat2x3.hpp
+	"detail/type_mat2x3.hpp"
+
+1458389182 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_mat2x3.hpp
+	"../fwd.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat2x3.inl"
+
+1457866026 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_mat2x3.inl
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\mat2x4.hpp
+	"detail/type_mat2x4.hpp"
+
+1458389220 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_mat2x4.hpp
+	"../fwd.hpp"
+	"type_vec2.hpp"
+	"type_vec4.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat2x4.inl"
+
+1458389220 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_mat2x4.inl
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\mat3x2.hpp
+	"detail/type_mat3x2.hpp"
+
+1458389182 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_mat3x2.hpp
+	"../fwd.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat3x2.inl"
+
+1457865834 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_mat3x2.inl
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\mat3x3.hpp
+	"detail/type_mat3x3.hpp"
+
+1458389182 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_mat3x3.hpp
+	"../fwd.hpp"
+	"type_vec3.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat3x3.inl"
+
+1457865834 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_mat3x3.inl
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\mat3x4.hpp
+	"detail/type_mat3x4.hpp"
+
+1458389182 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_mat3x4.hpp
+	"../fwd.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat3x4.inl"
+
+1457865832 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_mat3x4.inl
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\mat4x2.hpp
+	"detail/type_mat4x2.hpp"
+
+1458389182 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_mat4x2.hpp
+	"../fwd.hpp"
+	"type_vec2.hpp"
+	"type_vec4.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat4x2.inl"
+
+1458389182 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_mat4x2.inl
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\mat4x3.hpp
+	"detail/type_mat4x3.hpp"
+
+1458389182 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_mat4x3.hpp
+	"../fwd.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat4x3.inl"
+
+1457865832 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_mat4x3.inl
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\mat4x4.hpp
+	"detail/type_mat4x4.hpp"
+
+1458389220 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_mat4x4.hpp
+	"../fwd.hpp"
+	"type_vec4.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat4x4.inl"
+
+1457865844 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_mat4x4.inl
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\trigonometric.hpp
+	"detail/func_trigonometric.hpp"
+
+1441044638 c:\users\isi\desktop\lodproject\libs\include\glm\detail\func_trigonometric.hpp
+	"setup.hpp"
+	"precision.hpp"
+	"func_trigonometric.inl"
+
+1458389182 c:\users\isi\desktop\lodproject\libs\include\glm\detail\func_trigonometric.inl
+	"_vectorize.hpp"
+	<cmath>
+	<limits>
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\detail\_vectorize.hpp
+	"type_vec1.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+
+1458389182 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_vec1.hpp
+	"../fwd.hpp"
+	"type_vec.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<cstddef>
+	"type_vec1.inl"
+
+1458389182 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_vec1.inl
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\exponential.hpp
+	"detail/func_exponential.hpp"
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\detail\func_exponential.hpp
+	"type_vec1.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	<cmath>
+	"func_exponential.inl"
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\detail\func_exponential.inl
+	"func_vector_relational.hpp"
+	"_vectorize.hpp"
+	<limits>
+	<cmath>
+	<cassert>
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\detail\func_vector_relational.hpp
+	"precision.hpp"
+	"setup.hpp"
+	"func_vector_relational.inl"
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\detail\func_vector_relational.inl
+	<limits>
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\common.hpp
+	"detail/func_common.hpp"
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\detail\func_common.hpp
+	"setup.hpp"
+	"precision.hpp"
+	"type_int.hpp"
+	"_fixes.hpp"
+	"func_common.inl"
+
+1451838036 c:\users\isi\desktop\lodproject\libs\include\glm\detail\func_common.inl
+	"func_vector_relational.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	"_vectorize.hpp"
+	<limits>
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\packing.hpp
+	"detail/func_packing.hpp"
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\detail\func_packing.hpp
+	"type_vec2.hpp"
+	"type_vec4.hpp"
+	"func_packing.inl"
+
+1437254918 c:\users\isi\desktop\lodproject\libs\include\glm\detail\func_packing.inl
+	"func_common.hpp"
+	"type_half.hpp"
+	"../fwd.hpp"
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_half.hpp
+	"setup.hpp"
+	"type_half.inl"
+
+1451838416 c:\users\isi\desktop\lodproject\libs\include\glm\detail\type_half.inl
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\geometric.hpp
+	"detail/func_geometric.hpp"
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\detail\func_geometric.hpp
+	"type_vec3.hpp"
+	"func_geometric.inl"
+
+1458389182 c:\users\isi\desktop\lodproject\libs\include\glm\detail\func_geometric.inl
+	"func_exponential.hpp"
+	"func_common.hpp"
+	"type_vec2.hpp"
+	"type_vec4.hpp"
+	"type_float.hpp"
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\matrix.hpp
+	"detail/func_matrix.hpp"
+
+1457214680 c:\users\isi\desktop\lodproject\libs\include\glm\detail\func_matrix.hpp
+	"../detail/precision.hpp"
+	"../detail/setup.hpp"
+	"../detail/type_mat.hpp"
+	"../vec2.hpp"
+	"../vec3.hpp"
+	"../vec4.hpp"
+	"../mat2x2.hpp"
+	"../mat2x3.hpp"
+	"../mat2x4.hpp"
+	"../mat3x2.hpp"
+	"../mat3x3.hpp"
+	"../mat3x4.hpp"
+	"../mat4x2.hpp"
+	"../mat4x3.hpp"
+	"../mat4x4.hpp"
+	"func_matrix.inl"
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\detail\func_matrix.inl
+	"../geometric.hpp"
+	<limits>
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\vector_relational.hpp
+	"detail/func_vector_relational.hpp"
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\integer.hpp
+	"detail/func_integer.hpp"
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\detail\func_integer.hpp
+	"setup.hpp"
+	"precision.hpp"
+	"func_common.hpp"
+	"func_vector_relational.hpp"
+	"func_integer.inl"
+
+1426531504 c:\users\isi\desktop\lodproject\libs\include\glm\detail\func_integer.inl
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	"type_int.hpp"
+	"_vectorize.hpp"
+	<intrin.h>
+	<limits>
+
+1458389182 c:\users\isi\desktop\lodproject\libs\include\glm\gtc\matrix_transform.hpp
+	"../mat4x4.hpp"
+	"../vec2.hpp"
+	"../vec3.hpp"
+	"../vec4.hpp"
+	"../gtc/constants.hpp"
+	"matrix_transform.inl"
+
+1441044256 c:\users\isi\desktop\lodproject\libs\include\glm\gtc\constants.hpp
+	"../detail/setup.hpp"
+	"constants.inl"
+
+1441045496 c:\users\isi\desktop\lodproject\libs\include\glm\gtc\constants.inl
+	<limits>
+
+1458389182 c:\users\isi\desktop\lodproject\libs\include\glm\gtc\matrix_transform.inl
+	"../geometric.hpp"
+	"../trigonometric.hpp"
+	"../matrix.hpp"
+
+1457610608 source:c:\users\isi\desktop\lodproject\src\global.cpp
+	"global.h"
+
+1461223866 source:c:\users\isi\desktop\lodproject\src\indexbuffer.cpp
+	"indexbuffer.h"
+
+1461223875 c:\users\isi\desktop\lodproject\src\indexbuffer.h
+	<GL/glew.h>
+
+1439207242 c:\users\isi\desktop\lodproject\libs\include\gl\glew.h
+	<stddef.h>
+	<inttypes.h>
+	<stdint.h>
+	<inttypes.h>
+	<Availability.h>
+	<OpenGL/glu.h>
+	<GL/glu.h>
+
+1457610608 source:c:\users\isi\desktop\lodproject\src\log.cpp
+	"global.h"
+
+1461336091 source:c:\users\isi\desktop\lodproject\src\main.cpp
+	<stdexcept>
+	<SDL2/SDL.h>
+	<GL/glew.h>
+	"global.h"
+	"window.h"
+	"shader.h"
+	"program.h"
+	"vao.h"
+	"vertexbuffer.h"
+	"misc.h"
+	"modelparser.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_assert.h"
+	"SDL_atomic.h"
+	"SDL_audio.h"
+	"SDL_clipboard.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_filesystem.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_haptic.h"
+	"SDL_hints.h"
+	"SDL_loadso.h"
+	"SDL_log.h"
+	"SDL_messagebox.h"
+	"SDL_mutex.h"
+	"SDL_power.h"
+	"SDL_render.h"
+	"SDL_rwops.h"
+	"SDL_system.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_version.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<math.h>
+	<float.h>
+	<iconv.h>
+	<sal.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_config.h
+	"SDL_platform.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_platform.h
+	"AvailabilityMacros.h"
+	"TargetConditionals.h"
+	<winapifamily.h>
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\begin_code.h
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\close_code.h
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_assert.h
+	"SDL_config.h"
+	"begin_code.h"
+	<signal.h>
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_atomic.h
+	"SDL_stdinc.h"
+	"SDL_platform.h"
+	"begin_code.h"
+	<mbarrier.h>
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_atomic.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_clipboard.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	<intrin.h>
+	<intrin.h>
+	<altivec.h>
+	<mmintrin.h>
+	<mm3dnow.h>
+	<xmmintrin.h>
+	<emmintrin.h>
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_quit.h"
+	"SDL_gesture.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_pixels.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_rect.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_pixels.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_surface.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_blendmode.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_blendmode.h
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keycode.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_keycode.h
+	"SDL_stdinc.h"
+	"SDL_scancode.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_scancode.h
+	"SDL_stdinc.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_gamecontroller.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_gesture.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_touch.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_filesystem.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_haptic.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_hints.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_log.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_messagebox.h
+	"SDL_stdinc.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_power.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_render.h
+	"SDL_stdinc.h"
+	"SDL_rect.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_system.h
+	"SDL_stdinc.h"
+	"SDL_keyboard.h"
+	"SDL_render.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768294 c:\users\isi\desktop\lodproject\libs\include\sdl2\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1458295486 c:\users\isi\desktop\lodproject\src\window.h
+	<iostream>
+	<memory>
+	<SDL2/SDL.h>
+	<GL/glew.h>
+
+1459864058 c:\users\isi\desktop\lodproject\src\shader.h
+	<iostream>
+	<vector>
+	<array>
+	<GL/glew.h>
+	<glm/glm.hpp>
+	"misc.h"
+
+1461329644 c:\users\isi\desktop\lodproject\src\misc.h
+	<stdint.h>
+	<string>
+	<iostream>
+	<sstream>
+	<typeinfo>
+	<type_traits>
+	<vector>
+	<streambuf>
+	<stdexcept>
+	<algorithm>
+	<iterator>
+	<regex>
+	<GL/glew.h>
+	"global.h"
+
+1461531276 c:\users\isi\desktop\lodproject\src\program.h
+	<GL/glew.h>
+	<glm/fwd.hpp>
+	<glm/glm.hpp>
+	<glm/gtc/matrix_transform.hpp>
+	"window.h"
+	"vertexbuffer.h"
+	"vao.h"
+	"shader.h"
+	"texture.h"
+	"Camera.h"
+	"indexbuffer.h"
+
+1461156872 c:\users\isi\desktop\lodproject\src\vertexbuffer.h
+	<tuple>
+	<vector>
+	<GL/glew.h>
+
+1458300216 c:\users\isi\desktop\lodproject\src\vao.h
+	<GL/glew.h>
+
+1461312018 c:\users\isi\desktop\lodproject\src\texture.h
+	<iostream>
+	<soil.h>
+	<GL/glew.h>
+
+1459864334 c:\users\isi\desktop\lodproject\libs\include\soil.h
+
+1461528810 c:\users\isi\desktop\lodproject\src\modelparser.h
+	<vector>
+	<string>
+	<fstream>
+	<iostream>
+	<sstream>
+	<regex>
+	<exception>
+	"global.h"
+	<glm/fwd.hpp>
+	<glm/glm.hpp>
+
+1461329586 source:c:\users\isi\desktop\lodproject\src\misc.cpp
+	<fstream>
+	<streambuf>
+	<stdexcept>
+	<algorithm>
+	<array>
+	"misc.h"
+	"global.h"
+
+1461530659 source:c:\users\isi\desktop\lodproject\src\program.cpp
+	<vector>
+	<array>
+	<math.h>
+	"program.h"
+	"global.h"
+	"modelparser.h"
+
+1461311763 source:c:\users\isi\desktop\lodproject\src\shader.cpp
+	<stdexcept>
+	<vector>
+	<fstream>
+	<tuple>
+	<glm/gtc/type_ptr.hpp>
+	"shader.h"
+	"misc.h"
+	"global.h"
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\gtc\type_ptr.hpp
+	"../gtc/quaternion.hpp"
+	"../vec2.hpp"
+	"../vec3.hpp"
+	"../vec4.hpp"
+	"../mat2x2.hpp"
+	"../mat2x3.hpp"
+	"../mat2x4.hpp"
+	"../mat3x2.hpp"
+	"../mat3x3.hpp"
+	"../mat3x4.hpp"
+	"../mat4x2.hpp"
+	"../mat4x3.hpp"
+	"../mat4x4.hpp"
+	<cstring>
+	"type_ptr.inl"
+
+1458389220 c:\users\isi\desktop\lodproject\libs\include\glm\gtc\quaternion.hpp
+	"../mat3x3.hpp"
+	"../mat4x4.hpp"
+	"../vec3.hpp"
+	"../vec4.hpp"
+	"../gtc/constants.hpp"
+	"quaternion.inl"
+
+1458389182 c:\users\isi\desktop\lodproject\libs\include\glm\gtc\quaternion.inl
+	"../trigonometric.hpp"
+	"../geometric.hpp"
+	"../exponential.hpp"
+	<limits>
+
+1424010684 c:\users\isi\desktop\lodproject\libs\include\glm\gtc\type_ptr.inl
+	<cstring>
+
+1461312044 source:c:\users\isi\desktop\lodproject\src\texture.cpp
+	"texture.h"
+	"global.h"
+
+1458300158 source:c:\users\isi\desktop\lodproject\src\vao.cpp
+	"vao.h"
+
+1461310937 source:c:\users\isi\desktop\lodproject\src\vertexbuffer.cpp
+	<exception>
+	"global.h"
+	"vertexbuffer.h"
+
+1461153323 source:c:\users\isi\desktop\lodproject\src\window.cpp
+	<stdexcept>
+	"window.h"
+	<GL/glew.h>
+	"global.h"
+
+1461530303 source:c:\users\isi\desktop\lodproject\src\modelparser.cpp
+	"modelparser.h"
+	"misc.h"
+
