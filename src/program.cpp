@@ -16,7 +16,7 @@ Program::~Program() {
 void Program::initialize()
 {
     ModelParser mp;
-    mp.parse("data/models/terrain.obj");
+    mp.parse("data/models/barrel.obj");
 
     window_ = Window("Test!", 800,600,true,false);
 
@@ -70,7 +70,7 @@ void Program::initialize()
     /* Luodaan tekstuuri olio. */
     texture_ = new Texture();
     /* Luodaan tekstuurioliolle sis‰ltˆ‰. */
-    texture_ -> create("data/textures/grass.jpg");
+    texture_ -> create("data/textures/barrel2.jpg");
     /* Bindataan ensimm‰inen, t‰ll‰ hetkell‰ ainoa, tekstuuri. */
     texture_ -> bind(GL_TEXTURE0);
     /* Isket‰‰n shaderille tieto tekstuurista. */
@@ -89,7 +89,7 @@ void Program::run()
         if (delta != 0)
         {
             // Lisp koodia :).
-            update(((float)timeNow)/((float)time_));
+            //update(((float)timeNow)/((float)time_));
         }
 
         handleEvents();

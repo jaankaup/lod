@@ -46,7 +46,7 @@ class Program
 		Shader* shader_ = 0;
 		Texture* texture_ = 0;
 		IndexBuffer* ib_ = 0;
-		Camera camera_ = Camera(glm::vec3(98.2f,50.2f,99.2f),glm::vec3(0.0f,0.0f,0.0f),glm::vec3(0.0f,1.0f,0.0f));
+		Camera camera_ = Camera(glm::vec3(2.2f,2.2f,2.2f),glm::vec3(0.0f,0.0f,0.0f),glm::vec3(0.0f,1.0f,0.0f));
 		glm::mat4 projection_ = glm::perspective(glm::radians(45.0f), 4.0f / 3.0f, 0.1f, 400.f);
 		glm::mat4 model_ = glm::mat4(1.0f);
 		unsigned int time_ = 0;

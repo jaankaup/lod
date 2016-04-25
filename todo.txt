@@ -1,0 +1,20 @@
+TODO:
+
+OHJELMA: 
+
+Camera luokan teko: Karri
+Model luokan teko: Kasimir
+Rendere luokka: ?
+Shadereita: valaistus, tekstin tulostus ?
+Wireframe shader : Juha
+Tekstuuri luokan korjaus : Janne 
+Shader luokkaan uniformblock lisäys : Janne 
+Materiaalin parsetus : Kasimir 
+Konrolliluokka ?
+Tessselaatio shadereihin tutustuminen ?
+
+KIRJALLINEN HOMMA:
+ 
+Aineistonkeruu : ?
+
+
