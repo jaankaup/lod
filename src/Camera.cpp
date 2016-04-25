@@ -11,7 +11,7 @@ Camera::Camera(const glm::vec3& cameraPosition, const glm::vec3& cameraTarget, c
 Camera::~Camera()
 {
     //dtor
-	//Juha oli Taalla
+	//Juha oli  dsdsg Taalla
 }
 
 glm::mat4 Camera::getMatrix() const
