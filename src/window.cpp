@@ -3,12 +3,6 @@
 #include <GL/glew.h>
 #include "global.h"
 
-void __attribute__((__stdcall__))
-gl_debug_message(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar* message, GLvoid* userParam)
-{
-    logDebug.log("%", message);
-}
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 Window::Window(const std::string& title, int width, int height, bool vsync, bool fullscreen)

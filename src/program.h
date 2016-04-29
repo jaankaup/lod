@@ -11,6 +11,7 @@
 #include "texture.h"
 #include "Camera.h"
 #include "indexbuffer.h"
+#include "texturecontrol.h"
 
 /// forward declaration.
 class Window;
@@ -21,7 +22,7 @@ class Program
 {
 	public:
 		/// Constructor.
-		Program() {}// : vbo_(GL_ARRAY_BUFFER,GL_STATIC_DRAW) {}
+		Program() {}
 	    /// Destructor.
 		~Program();
         /// Setup up program.
@@ -46,8 +47,12 @@ class Program
 		Shader* shader_ = 0;
 		Texture* texture_ = 0;
 		IndexBuffer* ib_ = 0;
-		Camera camera_ = Camera(glm::vec3(2.2f,2.2f,2.2f),glm::vec3(0.0f,0.0f,0.0f),glm::vec3(0.0f,1.0f,0.0f));
-		glm::mat4 projection_ = glm::perspective(glm::radians(45.0f), 4.0f / 3.0f, 0.1f, 400.f);
+		TextureControl* tControl_ = 0;
+		TexturePtr textureP1_;
+		TexturePtr textureP2_;
+		TexturePtr textureP3_;
+		Camera camera_ = Camera(glm::vec3(98.2f,120.2f,99.2f),glm::vec3(0.0f,0.0f,0.0f),glm::vec3(0.0f,1.0f,0.0f));
+		glm::mat4 projection_ = glm::perspective(glm::radians(45.0f), 4.0f / 3.0f, 0.1f, 300.f);
 		glm::mat4 model_ = glm::mat4(1.0f);
 		unsigned int time_ = 0;
 };

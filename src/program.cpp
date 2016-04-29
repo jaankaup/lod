@@ -16,7 +16,7 @@ Program::~Program() {
 void Program::initialize()
 {
     ModelParser mp;
-    mp.parse("data/models/barrel.obj");
+    mp.parse("data/models/terrain.obj");
 
     window_ = Window("Test!", 800,600,true,false);
 
@@ -26,14 +26,11 @@ void Program::initialize()
     glDepthFunc(GL_LESS);
 
     // Nämä liittyy tekstuureihin.
-    //glFrontFace(GL_CCW);
-    //glCullFace(GL_BACK);
-    //glEnable(GL_CULL_FACE);
     glFrontFace(GL_CW);
     glCullFace(GL_FRONT);
     glEnable(GL_CULL_FACE);
 
-    glClearColor(1.0f,1.0f,1.0f,1.0f);
+    glClearColor(0.0f,0.0f,0.0f,1.0f);
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 
     /* Luodaan shader. */
@@ -67,12 +64,12 @@ void Program::initialize()
     vbo_ -> setData(&dat[0], sizeof(float)*dat.size(), AttributeConfiguration::VTN_Interleaved);
     ib_ -> setData(mp.getIndexArray(), mp.getIndexSize(), mp.getIndiceCount());
 
-    /* Luodaan tekstuuri olio. */
-    texture_ = new Texture();
-    /* Luodaan tekstuurioliolle sisältöä. */
-    texture_ -> create("data/textures/barrel2.jpg");
+    textureP1_ = TextureControl::getInstance().createTexture("data/textures/dirt.jpg","dirt");
+    textureP2_ = TextureControl::getInstance().createTexture("data/textures/cliff.jpg","cliff");
+    textureP3_ = TextureControl::getInstance().createTexture("data/textures/grass.jpg","outo");
+
     /* Bindataan ensimmäinen, tällä hetkellä ainoa, tekstuuri. */
-    texture_ -> bind(GL_TEXTURE0);
+    textureP1_->bind();
     /* Isketään shaderille tieto tekstuurista. */
     shader_ -> setUniform(std::string("myTextureSampler"), 0);
     /* Alustetaan ohjelman aika. */
@@ -83,13 +80,13 @@ void Program::run()
 {
     while (running_)
     {
-        SDL_Delay(10);
+        //SDL_Delay(10);
         unsigned int timeNow = SDL_GetTicks();
         unsigned int delta = timeNow - time_;
         if (delta != 0)
         {
             // Lisp koodia :).
-            //update(((float)timeNow)/((float)time_));
+            update(((float)timeNow)/((float)time_));
         }
 
         handleEvents();
@@ -108,6 +105,26 @@ void Program::handleEvents()
         case SDL_QUIT:
             running_ = false;
             break;
+
+        case SDL_KEYDOWN:
+            switch (e.key.keysym.sym)
+            {
+                case SDLK_1:
+                    textureP2_->bind();
+                    shader_ -> setUniform(std::string("myTextureSampler"), textureP1_->getUnit());
+                    break;
+
+                case SDLK_2:
+                    textureP1_->bind();
+                    shader_ -> setUniform(std::string("myTextureSampler"), textureP2_->getUnit());
+                    break;
+
+                case SDLK_3:
+                    textureP3_->bind();
+                    shader_ -> setUniform(std::string("myTextureSampler"), textureP3_->getUnit());
+                    break;
+            }
+
 
         case SDL_WINDOWEVENT:
             switch(e.window.event)
@@ -129,9 +146,9 @@ void Program::handleEvents()
 
 void Program::update(float f)
 {
-    float blaahX = sin(f*3); // En tiedä mitä tekee.
-    float blyyhY = cos(f*3); // En tiedä mitä tekee.
-    float bliihZ = blaahX * blyyhY * 5; // Mitä tämä tekee? HT.
+    float blaahX = 80.0f + 60.0f * sin(f); // En tiedä mitä tekee.
+    float blyyhY = 80.0f + 60.0f * cos(f); // En tiedä mitä tekee.
+    float bliihZ = 80.0f + 60.0f * sin(f) * cos(f); // Mitä tämä tekee? HT.
 
     camera_.translate(glm::vec3(blaahX,blyyhY,bliihZ)); // Testataan ohjelmaa. Ei muuta virkaa.
     /* Muodostetaan uusi päivitetty model view projektio. */
@@ -142,10 +159,12 @@ void Program::update(float f)
 
 void Program::render()
 {
-    glClearColor(1.0f,1.0f,1.0f,1.0f);
+    glClearColor(0.0f,0.0f,0.0f,1.0f);
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
     shader_ -> use();
     /* Bindaillaan juttuja ennen piirtoa. */
+    //textureP1_->bind();
+    //shader_ -> setUniform(std::string("myTextureSampler"), 0);
     vao_ -> bind();
     vbo_ -> bind();
     ib_ -> bind();

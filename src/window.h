@@ -25,7 +25,7 @@ class Window
 		/// VSync asetus. Palauttaa true jos onnsituu, muutoin palauttaa falsen.
 		void setVsync(bool vFlag);
 		/// Fullscreen mode.
-                void setFullScreen(bool fullscreen);
+        void setFullScreen(bool fullscreen);
 		/// Päivitetään bufferit.
 		void swapBuffers();
 		/// Ikkunan koon muuttaminen.
@@ -33,7 +33,7 @@ class Window
 
 	private:
 		/// Kahva SDL_ikkunaan
-		SDL_Window* window_; 
+		SDL_Window* window_;
 		/// Kahva SDL_ikkunaan liittyvään GL-kontekstiin.
 		SDL_GLContext glcontext_;
 
@@ -42,7 +42,7 @@ class Window
 
 		/// Vapauttaa privaattijäsenmuuttujat jne.
 		void dispose();
-		
+
 		/// Asetetaan ikkunan GL-attribuutit.
 		void initializeGLAttributes();
 

@@ -33,7 +33,9 @@ class ModelParser
         bool parsiTekstuuriKoordinaatti(std::string rivi, glm::vec2& tk);
         bool parsiNormaaliVektori(std::string rivi, glm::vec3& normaali);
         bool parsiMateriaali(std::string rivi, Material& materiaali);
+        //bool parseFaces(std::string line, Verteksi_indekseilla& face);
         bool parsiFace(std::string rivi);
+        //bool parseFaces(std::string line);
         void parse(const std::string& fileLocation);
         int findIndex(const Verteksi_indekseilla& vi);
         void* getIndexArray();

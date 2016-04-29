@@ -11,7 +11,6 @@ Camera::Camera(const glm::vec3& cameraPosition, const glm::vec3& cameraTarget, c
 Camera::~Camera()
 {
     //dtor
-	//Juha oli  dsdsg Taalla
 }
 
 glm::mat4 Camera::getMatrix() const
@@ -23,6 +22,7 @@ glm::mat4 Camera::getMatrix() const
 
 void Camera::translate(const glm::vec3& posDelta)
 {
-    position_ = position_ + posDelta;
+    position_ = posDelta;
+    //logInfo.log("(%,%,%)",position_.x, position_.y, position_.z);
     // logInfo.log("(%,%,%)", position_.x, position_.y,position_.z);
 }

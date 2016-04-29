@@ -44,6 +44,8 @@
 			<Add option="-lSDL2" />
 			<Add directory="libs/lib" />
 		</Linker>
+		<Unit filename="src/Buffer.cpp" />
+		<Unit filename="src/Buffer.h" />
 		<Unit filename="src/Camera.cpp" />
 		<Unit filename="src/Camera.h" />
 		<Unit filename="src/global.cpp" />
@@ -63,6 +65,8 @@
 		<Unit filename="src/shader.h" />
 		<Unit filename="src/texture.cpp" />
 		<Unit filename="src/texture.h" />
+		<Unit filename="src/texturecontrol.cpp" />
+		<Unit filename="src/texturecontrol.h" />
 		<Unit filename="src/vao.cpp" />
 		<Unit filename="src/vao.h" />
 		<Unit filename="src/vertexbuffer.cpp" />

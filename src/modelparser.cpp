@@ -49,6 +49,7 @@ void ModelParser::parse(const std::string& fileLocation)
 
 }
 
+//Parsii verteksin annettuun verteksiin ja palauttaa onnistuiko se.
 bool ModelParser::parsiVerteksiRivi(std::string rivi, glm::vec3& verteksi){
     static const std::regex verterex("v\\s+(\\-?\\d+\\.\\d+)\\s+(\\-?\\d+\\.\\d+)\\s+(\\-?\\d+\\.\\d+)");
 
