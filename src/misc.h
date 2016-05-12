@@ -11,6 +11,9 @@
 #include <iterator>
 #include <regex>
 #include <GL/glew.h>
+#include <glm/fwd.hpp>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 #include "global.h"
 
 namespace Misc
@@ -31,4 +34,6 @@ namespace Misc
    /// @param delimRegex is the delimiter regex string. Default delimRegex is
    /// skips white spaces and capture all which isn't a white space.
    extern void tokenize(const std::string &line, std::vector<std::string> &container, const std::string delimRegex);
+
+   extern glm::mat3 calculateNormalMatrix(const glm::mat4& modelView);
 }; // namespace Misc

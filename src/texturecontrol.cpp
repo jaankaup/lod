@@ -25,7 +25,7 @@ TexturePtr TextureControl::createTexture(const std::string& fileLocation, const 
         if (units_[i] == false)
         {
             TexturePtr t(new Texture());
-            t->create(fileLocation,name,i);
+            t->create(fileLocation);
             units_[i] = true;
             return t;
         }

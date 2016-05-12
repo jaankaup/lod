@@ -46,13 +46,9 @@ Window::Window(const std::string& title, int width, int height, bool vsync, bool
     }
     */
 
-    /* Tulostetaan tietoja OpenGL:stä ja laitteistosta. */
-    std::string version  = reinterpret_cast<const char*>(glGetString(GL_VERSION));
-    std::string vendor   = reinterpret_cast<const char*>(glGetString(GL_VENDOR));
-    std::string renderer = reinterpret_cast<const char*>(glGetString(GL_RENDERER));
-    logInfo.log("GL_Version: %", version);
-    logInfo.log("Vendor: %", vendor);
-    logInfo.log("Renderer: %", renderer);
+    logInfo.log("GL_Version: %", glGetString(GL_VERSION));
+    logInfo.log("Vendor: %", glGetString(GL_VENDOR));
+    logInfo.log("Renderer: %", glGetString(GL_RENDERER));
 
     /* Luodaan ikkunalle perustapahtumat. */
     initialWindowEvents();
@@ -162,10 +158,10 @@ void Window::initializeGLAttributes()
     //SDL_GL_SetAttribute(SDL_GL_GREEN_SIZE, 8);
     //SDL_GL_SetAttribute(SDL_GL_BLUE_SIZE, 8);
     //SDL_GL_SetAttribute(SDL_GL_ALPHA_SIZE, 8);
-    //SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 24);
+    SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 24);
     //SDL_GL_SetAttribute(SDL_GL_STENCIL_SIZE, 8);
     SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
-    //SDL_GL_SetAttribute(SDL_GL_MULTISAMPLESAMPLES, 1);
+    SDL_GL_SetAttribute(SDL_GL_MULTISAMPLESAMPLES, 1);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);
 }

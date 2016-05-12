@@ -116,3 +116,9 @@ void tokenize(const std::string &line, std::vector<std::string> &container, cons
 }
 
 }; // namespace Misc
+
+glm::mat3 calculateNormalMatrix(const glm::mat4& modelView)
+{
+    glm::mat4 temp = glm::transpose(glm::inverse(modelView));
+    return (glm::mat3(glm::vec3(temp[0][0],temp[0][1],temp[0][2]),glm::vec3(temp[1][0],temp[1][1],temp[1][2]),glm::vec3(temp[2][0],temp[2][1],temp[2][2])));
+}

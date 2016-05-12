@@ -27,3 +27,13 @@ unsigned int IndexBuffer::getElementCount() const
 {
     return numberOfElemets_;
 }
+
+GLuint IndexBuffer::getID() const
+{
+    return ib_;
+}
+
+IndexBuffer& IndexBuffer::getInstance()
+{
+    return *this;
+}

@@ -1,14 +1,7 @@
 #include <stdexcept>
 #include <SDL2/SDL.h>
-#include <GL/glew.h>
-#include "global.h"
-#include "window.h"
-#include "shader.h"
 #include "program.h"
-#include "vao.h"
-#include "vertexbuffer.h"
-#include "misc.h"
-#include "modelparser.h"
+#include "mainapplication.h"
 
 void initializeSDL()
 {
@@ -22,10 +15,20 @@ void initializeSDL()
 
 int main(int argc, char** argv)
 {
+
+    initializeSDL();
+    MainApplication p;
+    p.initialize();
+    p.run();
+    SDL_Quit();
+    return 0;
+
+/*
     initializeSDL();
     Program p;
     p.initialize();
     p.run();
     SDL_Quit();
     return 0;
+*/
 }

@@ -7,14 +7,13 @@
 #include "misc.h"
 #include "global.h"
 
-
 Shader::Shader()
 {
 }
 
 Shader::~Shader()
 {
-    glDeleteProgram(shaderID_);
+    if (shaderID_ != 0) glDeleteProgram(shaderID_);
 }
 
 void Shader::use()
@@ -24,10 +23,6 @@ void Shader::use()
 
 void Shader::createFromSource(const std::vector<std::string>& filelocations)
 {
-    for (const auto& file : filelocations)
-    {
-        logInfo.log("Loading shader file: %", file);
-    }
 
     using ShaderObjData = struct{
         GLenum shaderType;
@@ -52,6 +47,8 @@ void Shader::createFromSource(const std::vector<std::string>& filelocations)
     /* We iterate trought all source codes and extract shader object types and sourcecodes. */
     for (const auto& location : filelocations)
     {
+        logInfo.log("Creating shader from file: %", location);
+
         /* Solve the type of shader object from file extension. */
         GLenum shaderType = Misc::getShaderType(location);
         if (shaderType == 0)
@@ -76,7 +73,7 @@ void Shader::createFromSource(const std::vector<std::string>& filelocations)
     }
 
     /* Attach shader objects to the program. */
-    for (const auto object : sod)
+    for (const auto& object : sod)
     {
         glAttachShader(shaderID_, object.shaderObj);
     }
@@ -85,7 +82,7 @@ void Shader::createFromSource(const std::vector<std::string>& filelocations)
 
     glLinkProgram(shaderID_);
 
-    int status;
+    GLint status;
     int errorLength;
     glGetShaderiv(shaderID_, pname, &status);
 
@@ -102,6 +99,7 @@ void Shader::createFromSource(const std::vector<std::string>& filelocations)
     {
         glDeleteShader(object.shaderObj);
     }
+    logInfo.log("Shader created succesfully.");
 }
 
 void Shader::setUniform(const std::string& name, int value) const
@@ -122,6 +120,12 @@ void Shader::setUniform(const std::string& name, const glm::vec3& value) const
     glUniform3fv(loc, 1,  glm::value_ptr(value));
 }
 
+void Shader::setUniform(const std::string& name, const glm::mat3& value) const
+{
+    GLint loc = glGetUniformLocation(shaderID_, name.c_str());
+    glUniform4fv(loc, 1,  glm::value_ptr(value));
+}
+
 void Shader::setUniform(const std::string& name, const glm::vec4& value) const
 {
     GLint loc = glGetUniformLocation(shaderID_, name.c_str());
@@ -132,6 +136,11 @@ void Shader::setUniform(const std::string& name, const glm::mat4& value) const
 {
     GLint loc = glGetUniformLocation(shaderID_, name.c_str());
     glUniformMatrix4fv(loc, 1, GL_FALSE,  glm::value_ptr(value));
+}
+
+GLuint Shader::getID() const
+{
+    return shaderID_;
 }
 
 

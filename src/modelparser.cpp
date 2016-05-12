@@ -16,6 +16,7 @@ ModelParser::~ModelParser()
     //dtor
 }
 
+
 void ModelParser::parse(const std::string& fileLocation)
 {
     std::string source = Misc::loadSource(fileLocation);
@@ -42,15 +43,15 @@ void ModelParser::parse(const std::string& fileLocation)
             continue;
         }
 
-        // if (parsiMateriaali(line)
-
-        if (!parsiFace(line)) continue;
+        if (parsiMateriaali(line)) continue;
+        if (parsiFace(line)) continue;
+        if (parsiFace3(line)) continue;
     }
 
 }
 
 //Parsii verteksin annettuun verteksiin ja palauttaa onnistuiko se.
-bool ModelParser::parsiVerteksiRivi(std::string rivi, glm::vec3& verteksi){
+bool ModelParser::parsiVerteksiRivi(const std::string& rivi, glm::vec3& verteksi){
     static const std::regex verterex("v\\s+(\\-?\\d+\\.\\d+)\\s+(\\-?\\d+\\.\\d+)\\s+(\\-?\\d+\\.\\d+)");
 
     std::smatch tulos;
@@ -60,13 +61,13 @@ bool ModelParser::parsiVerteksiRivi(std::string rivi, glm::vec3& verteksi){
     std::string apu2 = tulos[2];
     std::string apu3 = tulos[3];
 
-    glm::vec3 v((float)atof(apu1.c_str()), (float)atof(apu2.c_str()), (float)atof(apu3.c_str()));
+    glm::vec3 v((float)atof(apu1.c_str()), (float)atof(apu2.c_str()), /*(-1)*/(float)atof(apu3.c_str()));
     verteksi = v;
 
     return true;
 }
 
-bool ModelParser::parsiTekstuuriKoordinaatti(std::string rivi, glm::vec2& tk) {
+bool ModelParser::parsiTekstuuriKoordinaatti(const std::string& rivi, glm::vec2& tk) {
     static const std::regex texrex("vt\\s+(\\-?\\d+\\.\\d+)\\s+(\\-?\\d+\\.\\d+)");
 
     std::smatch tulos;
@@ -80,7 +81,7 @@ bool ModelParser::parsiTekstuuriKoordinaatti(std::string rivi, glm::vec2& tk) {
     return true;
 }
 
-bool ModelParser::parsiNormaaliVektori(std::string rivi, glm::vec3& normaali){
+bool ModelParser::parsiNormaaliVektori(const std::string& rivi, glm::vec3& normaali){
     static const std::regex norrex("vn\\s+(\\-?\\d+\\.\\d+)\\s+(\\-?\\d+\\.\\d+)\\s+(\\-?\\d+\\.\\d+)");
 
     std::smatch tulos;
@@ -90,36 +91,64 @@ bool ModelParser::parsiNormaaliVektori(std::string rivi, glm::vec3& normaali){
     std::string apu2 = tulos[2];
     std::string apu3 = tulos[3];
 
-    glm::vec3 v((float)atof(apu1.c_str()), (float)atof(apu2.c_str()), (float)atof(apu3.c_str()));
+    glm::vec3 v((float)atof(apu1.c_str()), (float)atof(apu2.c_str()), /*(-1)*/(float)atof(apu3.c_str()));
     normaali = v;
 
     return true;
 }
 
-bool ModelParser::parsiMateriaali(std::string rivi, Material& materiaali){
+bool ModelParser::parsiMateriaali(const std::string& rivi){
     static const std::regex marex("usemtl\\s+(\\S+)");
 
     std::smatch tulos;
     if (!regex_match(rivi, tulos, marex)) return false;
+    std::string apu = tulos[1];
+
+    if (materials_.size() > 0)
+    {
+        int lastIndex = materials_[materials_.size()-1].end;
+        Material x;
+        x.material = apu;
+        x.start = lastIndex;
+        x.end = lastIndex;
+        materials_.push_back(x);
+    }
+
+    else
+    {
+        Material temp;
+        temp.material = apu;
+        temp.start = 0;
+        temp.end = 0;
+        materials_.push_back(temp);
+
+    }
 
     return true;
 }
 
-bool ModelParser::parsiFace(std::string rivi){
+bool ModelParser::parsiFace(const std::string& rivi){
     using std::string;
+    int materialIndex = materials_.size()-1;
 	static const std::regex farex4("f\\s+(\\d+)\\/(\\d+)\\/(\\d+)\\s+(\\d+)\\/(\\d+)\\/(\\d+)\\s+(\\d+)\\/(\\d+)\\/(\\d+)\\s+(\\d+)\\/(\\d+)\\/(\\d+)");
-    static const std::regex farex3("f\\s+(\\d+)\\/(\\d+)\\/(\\d+)\\s+(\\d+)\\/(\\d+)\\/(\\d+)\\s+(\\d+)\\/(\\d+)\\/(\\d+)");
 
     std::smatch tulos;
+
     bool nelja = false;
+
     if (regex_match(rivi, tulos, farex4))
     {
         nelja = true;
+        if (materialIndex == -1)
+            throw std::runtime_error("ModelParser::parsiFace() -> parsitaan faceja, mutta materiaalia ei ole luettu.");
+        materials_[materialIndex].end += 6;
     }
-    else if (!regex_match(rivi, tulos, farex3))
+    else
     {
         return false;
     }
+
+    //logDebug.log("NYT PARSITAAN %", rivi);
 
     string apu1 = tulos[1];
     string apu2 = tulos[2];
@@ -151,12 +180,109 @@ bool ModelParser::parsiFace(std::string rivi){
 
     Verteksi_indekseilla v4;
 
-    if (nelja)
+    v4.v_indeksi = (int)atoi(apu10.c_str());
+    v4.t_indeksi = (int)atoi(apu11.c_str());
+    v4.n_indeksi = (int)atoi(apu12.c_str());
+
+    // TODO: copypaste meininki. korjaa!
+    /* V1 */
+    int v1Indeksi = findIndex(v1);
+    if (v1Indeksi == -1)
     {
-        v4.v_indeksi = (int)atoi(apu10.c_str());
-        v4.t_indeksi = (int)atoi(apu11.c_str());
-        v4.n_indeksi = (int)atoi(apu12.c_str());
+        v1Indeksi = verteksitIndekseilla_.size();
+        verteksitIndekseilla_.push_back(v1);
+        //indices_.push_back(v1Indeksi);
     }
+    //else indices_.push_back(v1Indeksi);
+
+    /* V2 */
+    int v2Indeksi = findIndex(v2);
+    if (v2Indeksi == -1)
+    {
+        v2Indeksi = verteksitIndekseilla_.size();
+        verteksitIndekseilla_.push_back(v2);
+        //indices_.push_back(v2Indeksi);
+    }
+    //else indices_.push_back(v2Indeksi);
+
+    /* V3 */
+    int v3Indeksi = findIndex(v3);
+    if (v3Indeksi == -1)
+    {
+        v3Indeksi = verteksitIndekseilla_.size();
+        verteksitIndekseilla_.push_back(v3);
+        //indices_.push_back(v3Indeksi);
+    }
+    //else indices_.push_back(v3Indeksi);
+
+    //indices_.push_back(v1Indeksi);
+    //indices_.push_back(v3Indeksi);
+
+    /* V4 */
+    int v4Indeksi = findIndex(v4);
+    if (v4Indeksi == -1)
+    {
+        v4Indeksi = verteksitIndekseilla_.size();
+        verteksitIndekseilla_.push_back(v4);
+        //indices_.push_back(v4Indeksi);
+    }
+    //else indices_.push_back(v4Indeksi);
+
+
+    indices_.push_back(v1Indeksi);
+    indices_.push_back(v2Indeksi);
+    indices_.push_back(v3Indeksi);
+    indices_.push_back(v1Indeksi);
+    indices_.push_back(v3Indeksi);
+    indices_.push_back(v4Indeksi);
+
+
+
+
+    return true;
+}
+
+bool ModelParser::parsiFace3(const std::string& rivi){
+    using std::string;
+    int materialIndex = materials_.size()-1;
+    static const std::regex farex3("f\\s+(\\d+)\\/(\\d+)\\/(\\d+)\\s+(\\d+)\\/(\\d+)\\/(\\d+)\\s+(\\d+)\\/(\\d+)\\/(\\d+)");
+
+    std::smatch tulos;
+//logInfo.log("KÄYDÄÄNKÖ KOSKAAN!");
+    if (regex_match(rivi, tulos, farex3))
+    {
+        if (materialIndex == -1)
+            throw std::runtime_error("ModelParser::parsiFace() -> parsitaan faceja, mutta materiaalia ei ole luettu.");
+        materials_[materialIndex].end += 3;
+    }
+    else
+    {
+        return false;
+    }
+    string apu1 = tulos[1];
+    string apu2 = tulos[2];
+    string apu3 = tulos[3];
+    string apu4 = tulos[4];
+    string apu5 = tulos[5];
+    string apu6 = tulos[6];
+    string apu7 = tulos[7];
+    string apu8 = tulos[8];
+    string apu9 = tulos[9];
+
+    Verteksi_indekseilla v1;
+    v1.v_indeksi = (int)atoi(apu1.c_str());
+    v1.t_indeksi = (int)atoi(apu2.c_str());
+    v1.n_indeksi = (int)atoi(apu3.c_str());
+
+    Verteksi_indekseilla v2;
+    v2.v_indeksi = (int)atoi(apu4.c_str());
+    v2.t_indeksi = (int)atoi(apu5.c_str());
+    v2.n_indeksi = (int)atoi(apu6.c_str());
+
+    Verteksi_indekseilla v3;
+    v3.v_indeksi = (int)atoi(apu7.c_str());
+    v3.t_indeksi = (int)atoi(apu8.c_str());
+    v3.n_indeksi = (int)atoi(apu9.c_str());
 
     // TODO: copypaste meininki. korjaa!
     /* V1 */
@@ -188,21 +314,6 @@ bool ModelParser::parsiFace(std::string rivi){
         indices_.push_back(v3Indeksi);
     }
     else indices_.push_back(v3Indeksi);
-
-    if (!nelja) return true;
-
-    indices_.push_back(v1Indeksi);
-    indices_.push_back(v3Indeksi);
-
-    /* V4 */
-    int v4Indeksi = findIndex(v4);
-    if (v4Indeksi == -1)
-    {
-        v4Indeksi = verteksitIndekseilla_.size();
-        verteksitIndekseilla_.push_back(v4);
-        indices_.push_back(v4Indeksi);
-    }
-    else indices_.push_back(v4Indeksi);
 
     return true;
 }
@@ -262,4 +373,9 @@ unsigned int ModelParser::getDataSize()
 unsigned int ModelParser::getIndiceCount()
 {
     return indices_.size();
+}
+
+std::vector<Material> ModelParser::getMaterials() const
+{
+    return materials_;
 }
