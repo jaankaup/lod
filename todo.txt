@@ -2,8 +2,6 @@ TODO:
 
 OHJELMA: 
 
-Camera luokan teko: Karri
-Model luokan teko: Kasimir
 Rendere luokka: ?
 Shadereita: valaistus, tekstin tulostus ?
 Wireframe shader : Juha
