@@ -82,7 +82,7 @@ void Shader::createFromSource(const std::vector<std::string>& filelocations)
 
     glLinkProgram(shaderID_);
 
-    GLint status;
+    int status;
     int errorLength;
     glGetShaderiv(shaderID_, pname, &status);
 
@@ -105,36 +105,42 @@ void Shader::createFromSource(const std::vector<std::string>& filelocations)
 void Shader::setUniform(const std::string& name, int value) const
 {
     GLint loc = glGetUniformLocation(shaderID_, name.c_str());
+    //if (loc == -1) logDebug.log("setUniform(%) ei loydy!", name);
     glUniform1i(loc, value);
 }
 
 void Shader::setUniform(const std::string& name, float value) const
 {
     GLint loc = glGetUniformLocation(shaderID_, name.c_str());
+    //if (loc == -1) logDebug.log("setUniform(%) ei loydy!", name);
     glUniform1f(loc, value);
 }
 
 void Shader::setUniform(const std::string& name, const glm::vec3& value) const
 {
     GLint loc = glGetUniformLocation(shaderID_, name.c_str());
+    //if (loc == -1) logDebug.log("setUniform(%) ei loydy!", name);
     glUniform3fv(loc, 1,  glm::value_ptr(value));
 }
 
 void Shader::setUniform(const std::string& name, const glm::mat3& value) const
 {
     GLint loc = glGetUniformLocation(shaderID_, name.c_str());
+    //if (loc == -1) logDebug.log("setUniform(%) ei loydy!", name);
     glUniform4fv(loc, 1,  glm::value_ptr(value));
 }
 
 void Shader::setUniform(const std::string& name, const glm::vec4& value) const
 {
     GLint loc = glGetUniformLocation(shaderID_, name.c_str());
+    //if (loc == -1) logDebug.log("setUniform(%) ei loydy!", name);
     glUniform4fv(loc, 1,  glm::value_ptr(value));
 }
 
 void Shader::setUniform(const std::string& name, const glm::mat4& value) const
 {
     GLint loc = glGetUniformLocation(shaderID_, name.c_str());
+    //if (loc == -1) logDebug.log("setUniform(%) ei loydy!", name);
     glUniformMatrix4fv(loc, 1, GL_FALSE,  glm::value_ptr(value));
 }
 
@@ -142,6 +148,7 @@ GLuint Shader::getID() const
 {
     return shaderID_;
 }
+
 
 
 

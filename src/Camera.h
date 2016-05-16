@@ -5,20 +5,23 @@
 #include <glm/fwd.hpp>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
+#include <iostream>
+#include <cmath>
+#include "global.h"
 
 class Camera
 {
     public:
         Camera(const glm::vec3& cameraPosition, const glm::vec3& targetPosition, const glm::vec3& upVector);
         ~Camera();
-        glm::mat4 getMatrix() const;
 
+        glm::mat4 getMatrix() const;
+        glm::vec3 getPosition() const;
         void translate(const glm::vec3& newPos);
         void rotateCamera(const float &xoffset, const float &yoffset);
         void update(const float &time);
         void handleKeyInput();
         void handleMouseInput(SDL_Event &mouseEvent);
-
         void setView(const glm::vec3& cameraTarget);
         void resetView();
         void toggleMode();
@@ -28,21 +31,27 @@ class Camera
     private:
         glm::mat4 view;
 
-        glm::vec3 defaultPosition_;
-        glm::vec3 position_;
+        glm::vec3 defaultPosition_; // Kameran aloitussijainti
+        glm::vec3 position_;        // Kameran sijainti
+        glm::vec3 target_;          // Kameran peruskohde
         glm::vec3 front_ = glm::vec3(0.0f, 0.0f,  -1.0f);
         glm::vec3 up_    = glm::vec3(0.0f, 1.0f,  0.0f);
-        glm::vec3 target_; // Kameran peruskohde
 
-        float lastFrameTime = 0.0f;
-        float deltaTime = 0.0f;
+        float deltaTime = 0.0f; // Aikakerroin ohjelmassa. Kompensoi p‰ivitysv‰lin muutoksia.
+        float movementInterp = 0.0f; // Kuvastaa ajan muutosta Tick-arvojen perusteella
+                                     // k‰ytet‰‰n floating, orbit -kameroissa
 
+        // Katselukulma
         float pitch = -45.0f;
         float yaw   = -90.0f;
+
+        // Kursorin sijainti ruudulla
         float lastMouseX = 0.0f;
         float lastMouseY = 0.0f;
-        float camSpeed = 5.0;
-        float camSensitivity = 0.6;
+
+        // Kameran liikkumisnopeuden kertoimet
+        float camSpeed = 3.0;       // 1.0 - 10.0
+        float camSensitivity = 0.5; // 0.1 - 1.0
 
         enum class CameraMode { Free, Orbit, Floating };
         CameraMode camMode = CameraMode::Free;

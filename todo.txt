@@ -1,9 +1,0 @@
-TODO
-
-OHJELMA: 
-Geometriashader
-Tessselaatio
-
-KIRJALLINEN HOMMA:
-Aineistonkeruu
-Rakenteen hahmottaminen

@@ -71,8 +71,6 @@
 		<Unit filename="src/model.h" />
 		<Unit filename="src/modelparser.cpp" />
 		<Unit filename="src/modelparser.h" />
-		<Unit filename="src/program.cpp" />
-		<Unit filename="src/program.h" />
 		<Unit filename="src/renderer.cpp" />
 		<Unit filename="src/renderer.h" />
 		<Unit filename="src/shader.cpp" />

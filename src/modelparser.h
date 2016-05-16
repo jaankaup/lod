@@ -31,14 +31,14 @@ class ModelParser
         ~ModelParser();
 
         bool parsiVerteksiRivi(const std::string& rivi, glm::vec3& verteksi);
-        bool parsiTekstuuriKoordinaatti(const std::string& rivi, glm::vec2& tk);
+        bool parsiTekstuuriKoordinaatti(const std::string& rivi, glm::vec2& tk, float textureTiling);
         bool parsiNormaaliVektori(const std::string& rivi, glm::vec3& normaali);
         bool parsiMateriaali(const std::string& rivi);
         //bool parseFaces(std::string line, Verteksi_indekseilla& face);
         bool parsiFace(const std::string& rivi);
         bool parsiFace3(const std::string& rivi);
         //bool parseFaces(std::string line);
-        void parse(const std::string& fileLocation);
+        void parse(const std::string& fileLocation, float textureTiling);
         int findIndex(const Verteksi_indekseilla& vi);
         void* getIndexArray();
         std::vector<float> getData();

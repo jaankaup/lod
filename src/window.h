@@ -31,6 +31,9 @@ class Window
 		/// Ikkunan koon muuttaminen.
 		void resize(int width, int height);
 
+		/// FRAMETIME; asettaa otsikon
+		void setTitle(const std::string& title, const float &fps);
+
 	private:
 		/// Kahva SDL_ikkunaan
 		SDL_Window* window_;

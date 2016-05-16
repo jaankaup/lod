@@ -15,20 +15,10 @@ void initializeSDL()
 
 int main(int argc, char** argv)
 {
-
     initializeSDL();
     MainApplication p;
     p.initialize();
     p.run();
     SDL_Quit();
     return 0;
-
-/*
-    initializeSDL();
-    Program p;
-    p.initialize();
-    p.run();
-    SDL_Quit();
-    return 0;
-*/
 }

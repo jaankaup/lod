@@ -36,8 +36,11 @@ class MainApplication
         std::vector<std::unique_ptr<Model>> models_;
         bool running_ = true;
         Renderer renderer_;
-        Camera camera_ = Camera(glm::vec3(0.0f,100.0f,130.0f),glm::vec3(0.0f,0.0f,0.0f),glm::vec3(0.0f,1.0f,0.0f));
+        Camera camera_ = Camera(glm::vec3(50.2f,50.2f,50.2f),glm::vec3(0.0f,0.0f,0.0f),glm::vec3(0.0f,1.0f,0.0f));
         unsigned int time_ = 0;
+
+        unsigned int frametimeSum = 0;
+        unsigned int frametimeCounter = 0;
 
         void glThings() const;
         void loadTextures();

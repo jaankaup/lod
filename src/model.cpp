@@ -24,7 +24,7 @@ Model& Model::operator=(Model&& other)
 void Model::create(const std::string& fileLocation)
 {
     ModelParser mp;
-    mp.parse(fileLocation);
+    mp.parse(fileLocation, textureTiling_);
     std::vector<float> dat = mp.getData();
 
     vao_.bind();
@@ -87,6 +87,11 @@ std::vector<Command> Model::createCommands() const
 void Model::setModelMatrix(const glm::mat4& matrix)
 {
     model_ = matrix;
+}
+
+void Model::setTextureTiling(float tilingFactor)
+{
+    textureTiling_ = tilingFactor;
 }
 /*
 glm::mat4 Model::getModelMatrix() const

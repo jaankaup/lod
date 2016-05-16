@@ -2,6 +2,7 @@
 #include "window.h"
 #include <GL/glew.h>
 #include "global.h"
+#include <sstream>
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -37,14 +38,6 @@ Window::Window(const std::string& title, int width, int height, bool vsync, bool
 
     /* Asetetaan vsync. */
     setVsync(vsync);
-
-    /*
-    if (GLEW_ARB_debug_output)
-    {
-        glDebugMessageCallback(&gl_debug_message, 0);
-        glEnable(GL_DEBUG_OUTPUT_SYNCHRONOUS);
-    }
-    */
 
     logInfo.log("GL_Version: %", glGetString(GL_VERSION));
     logInfo.log("Vendor: %", glGetString(GL_VENDOR));
@@ -140,7 +133,6 @@ void Window::createGLContext()
         std::string glewError = reinterpret_cast<const char*>(glewGetErrorString(error));
         throw std::runtime_error("Window::createGLContext: Error while initializing GLEW. " + glewError);
      }
-
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -161,8 +153,8 @@ void Window::initializeGLAttributes()
     SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 24);
     //SDL_GL_SetAttribute(SDL_GL_STENCIL_SIZE, 8);
     SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
-    SDL_GL_SetAttribute(SDL_GL_MULTISAMPLESAMPLES, 1);
-    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
+    SDL_GL_SetAttribute(SDL_GL_MULTISAMPLESAMPLES, 4);
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 4);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);
 }
 
@@ -181,4 +173,15 @@ void Window::initialWindowEvents()
     e.window.data1 = width;
     e.window.data2 = height;
     SDL_PushEvent(&e);
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void Window::setTitle(const std::string& title, const float &fps)
+{
+    std::stringstream ss;
+    ss << title << " (" << fps << " fps)";
+
+    if (window_ != NULL)
+        SDL_SetWindowTitle(window_, ss.str().c_str());
 }

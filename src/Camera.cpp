@@ -1,12 +1,10 @@
-#include "global.h"
 #include "Camera.h"
-#include <iostream>
-#include <cmath>
-using std::cout;
-using std::endl;
 
+
+// Konstruktori
 Camera::Camera(const glm::vec3& cameraPosition, const glm::vec3& cameraTarget, const glm::vec3& upVector)
 {
+
     defaultPosition_ = cameraPosition;
     position_ = cameraPosition;
     target_ = cameraTarget;
@@ -15,7 +13,10 @@ Camera::Camera(const glm::vec3& cameraPosition, const glm::vec3& cameraTarget, c
     rotateCamera(0,0);
 }
 
-Camera::~Camera() {}
+// Destruktori
+Camera::~Camera()
+{
+}
 
 
 /**
@@ -27,15 +28,29 @@ glm::mat4 Camera::getMatrix() const
     return view;
 }
 
+/**
+ * Palauttaa kameran sijainnin
+ * @return position
+ */
+glm::vec3 Camera::getPosition() const
+{
+    return position_;
+}
+
 
 /**
  * Asettaa kameran katsomaan annettua kohdetta
+ * @param cameraTarget kameran kohdevektori
  */
 void Camera::setView(const glm::vec3& cameraTarget)
 {
     view = glm::lookAt(position_, cameraTarget, up_);
 }
 
+
+/**
+ * Palauttaa kameran sijainnin alkuarvoihin
+ */
 void Camera::resetView()
 {
     position_ = defaultPosition_;
@@ -69,8 +84,8 @@ void Camera::translate(const glm::vec3& newPos)
 }
 
 
-/**
- * Kameran suunnan muutos window-koordinaattien perusteella
+/***
+ * Kameran suunnan muutos hiirikoordinaattien perusteella.
  * @param xoffset x-muutos
  * @param xoffset y-muutos
  */
@@ -87,58 +102,65 @@ void Camera::rotateCamera(const float &xoffset, const float &yoffset)
 }
 
 
+/**
+ * Muuttaa kameran liikkumisnopeutta parametrin verran.
+ * Minimi 1.0, maksimi 10.0
+ * @param adjust muutos
+ */
 void Camera::adjustSpeed(const float &adjust)
 {
     camSpeed += adjust;
-    camSpeed = glm::clamp(camSpeed, 1.0f, 15.0f);
+    camSpeed = glm::clamp(camSpeed, 1.0f, 10.0f);
     //cout << "Camera speed: " << camSpeed << endl;
-    logDebug.log("Camera speed: %", camSpeed);
+    logInfo.log("Camera speed: %", camSpeed);
 }
 
+
+/**
+ * Muuttaa kameran kääntymisnopeutta parametrin verran.
+ * Minimi 0.1, maksimi 1.0
+ * @param adjust muutos
+ */
 void Camera::adjustSensitivity(const float &adjust)
 {
     camSensitivity += adjust;
     camSensitivity = glm::clamp(camSensitivity, 0.1f, 1.0f);
     //cout << "Camera sensitivity: "  << camSensitivity << endl;
-    logDebug.log("Camera sensitivity: %", camSensitivity);
+    logInfo.log("Camera sensitivity: %", camSensitivity);
 }
 
 
 /**
- * Kameran tilanteen päivitys
- * @param time ajanhetki, välitetään program-luokasta
+ * Kameran päivitys
+ * @param time aikakerroin, (currentTick / lastTick), välitetään program-luokasta
  */
 void Camera::update(const float &time)
 {
     deltaTime = time;
-
-    // print frametime
-    //cout << (SDL_GetTicks() - (float)lastFrameTime) << " - ";
-    //lastFrameTime = SDL_GetTicks();
-
-    // Väliaikainen korjaus
-    lastFrameTime = (SDL_GetTicks() / 2000.0f) * deltaTime;
+    movementInterp = (SDL_GetTicks() * 0.0005f) * deltaTime;
 
     if (camMode == CameraMode::Free)
     {
+        // WASD-kamera
         translate(position_);
         setView(position_ + front_);
     }
     else if (camMode == CameraMode::Floating)
     {
-        // HUOM! GetTicks
-        float ranX = 80.0f + 60.0f * sin(lastFrameTime); // Vaihteluväli 20-140
-        float ranY = 80.0f + 60.0f * cos(lastFrameTime); // Vaihteluväli 20-140
-        float ranZ = 80.0f + 60.0f * sin(lastFrameTime) * cos(lastFrameTime); // Vaihteluväli 50-110
-        translate(glm::vec3(ranX,ranY,ranZ));
+        // Liikuttelee kameraa edestakaisin
+        float coordX = 80.0f + 80.0f * sin(movementInterp); // Vaihteluväli 0-160
+        float coordY = 80.0f + 40.0f * cos(movementInterp); // Vaihteluväli 40-120
+        float coordZ = 80.0f + 80.0f * sin(movementInterp) * cos(movementInterp); // Vaihteluväli 40-120
+        translate(glm::vec3(coordX, coordY, coordZ));
         setView(target_);
     }
     else if (camMode == CameraMode::Orbit)
     {
-        // HUOM! GetTicks
-        float ranX = 0.0f + 180.0f * sin(lastFrameTime);
-        float ranZ = 0.0f + 180.0f * cos(lastFrameTime);
-        translate(glm::vec3(ranX,120.0f,ranZ));
+        // Pyörittää kameraa kohteen ympäri
+        float coordX = 0.0f + 160.0f * sin(movementInterp);
+        float coordY = 120.0f; // Korkeus
+        float coordZ = 0.0f + 160.0f * cos(movementInterp);
+        translate(glm::vec3(coordX, coordY, coordZ));
         setView(target_);
     }
 
@@ -151,50 +173,33 @@ void Camera::update(const float &time)
  */
 void Camera::handleKeyInput()
 {
+    /* Pyydetään SDL:n näppäintila */
     const Uint8* keystate = SDL_GetKeyboardState(NULL);
 
+    /* Shift hidastaa liikkumisnopeutta */
+    float speedMultiplier = camSpeed;
+    if(keystate[SDL_SCANCODE_LSHIFT])
+        speedMultiplier *= 0.1f;
+
+    /* WASD-näppäimet */
     if(keystate[SDL_SCANCODE_UP] || keystate[SDL_SCANCODE_W])
-    {
-        if(keystate[SDL_SCANCODE_LSHIFT])
-            position_ += front_ * (camSpeed * 0.1f) * deltaTime;
-        else
-            position_ += front_ * camSpeed * deltaTime;
-    }
+        position_ += front_ * speedMultiplier * deltaTime;
+
     if(keystate[SDL_SCANCODE_DOWN] || keystate[SDL_SCANCODE_S])
-    {
-        if(keystate[SDL_SCANCODE_LSHIFT])
-            position_ -= front_ * (camSpeed * 0.1f) * deltaTime;
-        else
-            position_ -= front_ * camSpeed * deltaTime;
-    }
+        position_ -= front_ * speedMultiplier * deltaTime;
+
     if(keystate[SDL_SCANCODE_LEFT] || keystate[SDL_SCANCODE_A])
-    {
-        if(keystate[SDL_SCANCODE_LSHIFT])
-            position_ -= glm::normalize(glm::cross(front_, up_)) * (camSpeed * 0.1f) * deltaTime;
-        else
-            position_ -= glm::normalize(glm::cross(front_, up_)) * camSpeed * deltaTime;
-    }
+        position_ -= glm::normalize(glm::cross(front_, up_)) * speedMultiplier * deltaTime;
+
     if(keystate[SDL_SCANCODE_RIGHT] || keystate[SDL_SCANCODE_D])
-    {
-        if(keystate[SDL_SCANCODE_LSHIFT])
-            position_ += glm::normalize(glm::cross(front_, up_)) * (camSpeed * 0.1f) * deltaTime;
-        else
-            position_ += glm::normalize(glm::cross(front_, up_)) * camSpeed * deltaTime;
-    }
-    if(keystate[SDL_SCANCODE_V] || keystate[SDL_SCANCODE_D])
-    {
-        if(keystate[SDL_SCANCODE_LSHIFT])
-            position_ += glm::normalize(up_) * (camSpeed * 0.1f) * deltaTime;
-        else
-            position_ += glm::normalize(up_) * camSpeed * deltaTime;
-    }
-    if(keystate[SDL_SCANCODE_C] || keystate[SDL_SCANCODE_D])
-    {
-        if(keystate[SDL_SCANCODE_LSHIFT])
-            position_ -= glm::normalize(up_) * (camSpeed * 0.1f) * deltaTime;
-        else
-            position_ -= glm::normalize(up_) * camSpeed * deltaTime;
-    }
+        position_ += glm::normalize(glm::cross(front_, up_)) * speedMultiplier * deltaTime;
+
+    /* Ylös ja alas liikkuminen */
+    if(keystate[SDL_SCANCODE_V])
+        position_ += glm::normalize(up_) * speedMultiplier * deltaTime;
+
+    if(keystate[SDL_SCANCODE_C])
+        position_ -= glm::normalize(up_) * speedMultiplier * deltaTime;
 }
 
 
@@ -205,16 +210,16 @@ void Camera::handleMouseInput(SDL_Event &inputEvent)
 {
     switch (inputEvent.type)
     {
-    case (SDL_MOUSEBUTTONDOWN): /* Klikkaus. Sijainti talteen sulavampaa liikettä varten. */
+    case (SDL_MOUSEBUTTONDOWN): /* Klikkaus. Sijainti talteen sulavampaa liikettä varten */
         lastMouseX = inputEvent.motion.x;
         lastMouseY = inputEvent.motion.y;
     case (SDL_MOUSEMOTION):
         switch (inputEvent.motion.state)
         {
-        case (SDL_BUTTON_LMASK): /* Vasemman hiiren napin vetäminen */
+        case (SDL_BUTTON_LMASK): /* Hiiren vasen nappi pohjassa */
             rotateCamera((inputEvent.motion.x - lastMouseX) * camSensitivity * deltaTime,
                          (lastMouseY - inputEvent.motion.y) * camSensitivity * deltaTime);
-            // Sijainti talteen
+            /* Hiiren sijainti talteen muutoksen laskemista varten */
             lastMouseX = inputEvent.motion.x;
             lastMouseY = inputEvent.motion.y;
             break;

@@ -33,6 +33,7 @@ class Model
         IndexBuffer& getIndexBuffer();
         std::vector<Command> createCommands() const;
         void setModelMatrix(const glm::mat4& matrix);
+        void setTextureTiling(float tilingFactor);
         //glm::mat4 getModelMatrix() const;
 
 
@@ -43,6 +44,7 @@ class Model
         IndexBuffer ibo_;
         std::vector<Material> material_;
         glm::mat4 model_ = glm::mat4(1.0f);
+        float textureTiling_ = 1.0f;
 };
 
 #endif // MODEL_H

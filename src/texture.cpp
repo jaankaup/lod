@@ -23,7 +23,15 @@ void Texture::create(const std::string& fileloc)
         throw std::runtime_error(SOIL_last_result());
     }
 
-    bind();
+    /* HATARATKAISU: jos polku alkaa nain, niin bindataan tekstuuri texture unit 1:seen. */
+    if (Misc::startswith(fileloc, "data/textures/displace"))
+    {
+        use(1);
+    }
+    else use(0);
+
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_MIRRORED_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_MIRRORED_REPEAT);
 
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);

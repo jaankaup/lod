@@ -20,10 +20,10 @@ Program::~Program() {
 void Program::initialize()
 {
     ModelParser mp;
-    mp.parse("data/models/terrain.obj");
+//    mp.parse("data/models/terrain.obj");
 
     ModelParser mp2;
-    mp2.parse("data/models/barrel.obj");
+//    mp2.parse("data/models/barrel.obj");
 
     window_ = Window("Test!", 800,600,true,false);
 

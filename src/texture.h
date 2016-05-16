@@ -6,6 +6,7 @@
 #include <soil.h>
 #include <GL/glew.h>
 #include "texturecontrol.h"
+#include "misc.h"
 
 class Texture
 {

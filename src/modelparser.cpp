@@ -16,8 +16,7 @@ ModelParser::~ModelParser()
     //dtor
 }
 
-
-void ModelParser::parse(const std::string& fileLocation)
+void ModelParser::parse(const std::string& fileLocation, float textureTiling)
 {
     std::string source = Misc::loadSource(fileLocation);
     std::stringstream ss(source);
@@ -32,7 +31,7 @@ void ModelParser::parse(const std::string& fileLocation)
         }
 
         glm::vec2 vt;//parsitaan tekstuurikoordinaatit
-        if (parsiTekstuuriKoordinaatti(line,vt)) {
+        if (parsiTekstuuriKoordinaatti(line,vt,textureTiling)) {
             tekstuuri_koordinaatit_.push_back(vt);
             continue;
         }
@@ -44,6 +43,8 @@ void ModelParser::parse(const std::string& fileLocation)
         }
 
         if (parsiMateriaali(line)) continue;
+
+
         if (parsiFace(line)) continue;
         if (parsiFace3(line)) continue;
     }
@@ -67,7 +68,7 @@ bool ModelParser::parsiVerteksiRivi(const std::string& rivi, glm::vec3& verteksi
     return true;
 }
 
-bool ModelParser::parsiTekstuuriKoordinaatti(const std::string& rivi, glm::vec2& tk) {
+bool ModelParser::parsiTekstuuriKoordinaatti(const std::string& rivi, glm::vec2& tk, float textureTiling) {
     static const std::regex texrex("vt\\s+(\\-?\\d+\\.\\d+)\\s+(\\-?\\d+\\.\\d+)");
 
     std::smatch tulos;
@@ -77,6 +78,7 @@ bool ModelParser::parsiTekstuuriKoordinaatti(const std::string& rivi, glm::vec2&
     std::string apu2 = tulos[2];
 
     glm::vec2 v((float)atof(apu1.c_str()), (float)atof(apu2.c_str()));
+    v *= textureTiling; /* TEXTURE TILING */
     tk = v;
     return true;
 }
