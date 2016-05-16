@@ -118,10 +118,12 @@ void MainApplication::handleEvents()
                 case SDLK_2:
                     renderer_.setTesselationMode(1);
                     break;
-                case SDLK_y: /* Displacement */
+                case SDLK_r:
+                case SDLK_F3: /* Displacement */
                     renderer_.adjustDisplacement(0.05);
                     break;
-                case SDLK_u: /* Displacement */
+                case SDLK_t:
+                case SDLK_F4: /* Displacement */
                     renderer_.adjustDisplacement(-0.05);
                     break;
 
@@ -150,6 +152,7 @@ void MainApplication::handleEvents()
                 case SDLK_F8: /* Kamera */
                     camera_.adjustSensitivity(0.1);
                     break;
+
                 case SDLK_q: /* Wireframe */
                     renderer_.toggleWireframe();
                     break;
