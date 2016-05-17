@@ -16,6 +16,7 @@ F6    :: camera speed +
 F7    :: camera sensitivity -
 F8    :: camera sensitivity +
 
+4     :: soil   material
 5     :: dirt   material
 6     :: bricks material
 7     :: stones material

@@ -68,7 +68,7 @@ class Renderer
         bool wireframe = false;
 
         /// Tekstuurin vaihto suoritusaikana
-        std::string currentTerrainTex = "brick";
+        std::string currentTerrainTex = "soil";
 };
 
 #endif // RENDERER_H

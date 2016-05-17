@@ -85,7 +85,7 @@ void Renderer::render()
             mask_.texture = com.texture;
 
             /* Tekstuurin vaihto suoritusaikana */
-            if (com.texture == "soil" && mask_.texture != currentTerrainTex)
+            if (com.texture == "terrainbase" && mask_.texture != currentTerrainTex)
             {
                 mask_.texture = currentTerrainTex;
                 t_ = TextureManager::getInstance().getTexture(currentTerrainTex);

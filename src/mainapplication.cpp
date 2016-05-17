@@ -127,6 +127,9 @@ void MainApplication::handleEvents()
                     renderer_.adjustDisplacement(-0.05);
                     break;
 
+                case SDLK_4: /* Terrain texture */
+                    renderer_.setTerrainTex("soil");
+                    break;
                 case SDLK_5: /* Terrain texture */
                     renderer_.setTerrainTex("dirt");
                     break;
@@ -229,6 +232,10 @@ void MainApplication::loadTextures()
 {
     // Wireframe
     TextureManager::getInstance().createTexture("data/textures/wireframe.jpg","wireframe");
+
+    // Terrain base - jos  on käytössä, tekstuuri vaihdetaan suoritusaikana rendererin toimesta
+    TextureManager::getInstance().createTexture("data/textures/terrainbase.jpg","terrainbase");
+    TextureManager::getInstance().createTexture("data/textures/displaceterrainbase.jpg","displaceterrainbase");
 
     // Cube + displacement
     TextureManager::getInstance().createTexture("data/textures/cube.jpg","cube");
@@ -351,7 +358,7 @@ void MainApplication::loadMaterials()
     MaterialInfo ruohikko;
     ruohikko.nimi = "terrain";
     ruohikko.shaderName = "tessellation";
-    ruohikko.textureName = "soil";
+    ruohikko.textureName = "terrainbase"; // Jos terrainbase on käytössä, tekstuuri vaihdetaan suoritusaikana
     MaterialManager::getInstance().create(ruohikko);
 
     MaterialInfo kivi;
